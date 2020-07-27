@@ -189,25 +189,25 @@ uglyURLs = false
         name = "文章"
         weight = 2
         pre = "internal"
-        post = "archive"
+        post = "" # post = "archive"
     [[menu.main]]
         url = "/categories/"
         name = "分类"
         weight = 3
         pre = "internal"
-        post = "th"
+        post = "" # post = "th"
     [[menu.main]]
         url = "/tags/"
         name = "标签"
         weight = 4
         pre = "internal"
-        post = "tags"
+        post = "" # post = "tags"
     [[menu.main]]
         url = "/about/"
         name = "关于"
         weight = 5
         pre = "internal"
-        post = "user-circle"
+        post = "" # post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
