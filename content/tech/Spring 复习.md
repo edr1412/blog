@@ -6,7 +6,7 @@ comments: true
 slug: "Srping_renew"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
 description: "复习资料... 博客园是加密的 不过这边就算了吧"
-tags: ["Spring"]
+tags: ["Spring", "Java"]
 date: 2020-07-07T14:07:04+08:00
 ---
 
