@@ -51,7 +51,7 @@ uglyURLs = false
 
 # 类别
 [taxonomies]
-    category = "categories"
+    # category = "categories"
     tag = "tags"
 
 # 修改时间
