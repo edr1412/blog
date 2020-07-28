@@ -587,8 +587,8 @@ uglyURLs = false
     #      的优先级高于此处
 
     ## Disqus
-    enableDisqus = false
-    disqusShortname = ""
+    enableDisqus = true
+    disqusShortname = "https://borber.cn"
 
     ## Valine
     enableValine = false
