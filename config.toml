@@ -587,7 +587,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     ## 
-    enableDisqus = true
+    enableDisqus = false
     disqusShortname = "borber-cn"
 
     ## Valine
@@ -612,8 +612,8 @@ uglyURLs = false
     # 说明：https://valine.js.org/
 
     ## Utterances
-    enableUtterances = false
-    utterancesRepo = ""
+    enableUtterances = true
+    utterancesRepo = "Borber/hugo-comment"
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
     utterancesThemeDark = "photon-dark"
