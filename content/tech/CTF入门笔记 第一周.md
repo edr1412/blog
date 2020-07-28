@@ -50,4 +50,4 @@ date: 2020-07-24T19:13:04+08:00
 
 截图
 
-<a href="https://cdn.jsdelivr.net/gh/Borber/PublicPic1/博客园/Web/xmind/SQL注入的套路.png" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Borber/PublicPic1/博客园/Web/xmind/SQL注入的套路.png"/></a>
+![截图](https://cdn.jsdelivr.net/gh/Borber/PublicPic1/博客园/Web/xmind/SQL注入的套路.png "思维导图")
