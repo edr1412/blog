@@ -3,7 +3,7 @@ title: "Friend"
 date: 2020-07-28T02:43:13+08:00
 ---
 
-<a href="https://novcu.com/" class="ftag" target="_blank">山卜方</a>
+<a href="https://novcu.com/" class="ftag" target="_blank">山卜方</a> <a href="https://borber.cn/" class="ftag" target="_blank">BORBER</a> <a href="https://www.volf.club/" class="ftag" target="_blank">群狼动力</a> <a href="https://at0de.com/" class="ftag" target="_blank">at0de</a> <a href="https://myfanqie.github.io/" class="ftag" target="_blank">莉莉娅</a> <a href="https://www.wallen.xyz/" class="ftag" target="_blank">上海喫茶馆</a> <a href="https://b.nit9.cn/" class="ftag" target="_blank">鸿</a> <a href="https://www.yuanqiao.pw/" class="ftag" target="_blank">知向前端</a> <a href="https://www.hm1006.cn/" class="ftag" target="_blank">hmblog</a> <a href="https://www.chihiro.org.cn/" class="ftag" target="_blank">千与千寻</a> <a href="https://blog.badapple.pro/" class="ftag" target="_blank">东方幻梦</a> <a href="http://joyo.ink/" class="ftag" target="_blank">卓越笔记</a> <a href="https://sublimerui.top/" class="ftag" target="_blank">果子小酱</a> <a href="https://www.zhaoyingtian.com/" class="ftag" target="_blank">呆小萌 Dream </a>   <a href="https://blog.devyi.com/" class="ftag" target="_blank"> 游轶 </a> <a href="http://koi.ll8s.com/" class="ftag" target="_blank">Sl'l 商洛 Blog</a> <a href="https://stblog.penclub.club/" class="ftag" target="_blank">黎想</a> <a href="https://lixingyong.com/" class="ftag" target="_blank">たかぎ</a> <a href="https://blog.sush4.vip/" class="ftag" target="_blank">sush4</a> <a href="https://1met.cn/" class="ftag" target="_blank">如初见</a> <a href="https://smilear.cn/" class="ftag" target="_blank">浅笑安然</a>
 
 
 
