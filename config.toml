@@ -591,9 +591,9 @@ uglyURLs = false
     disqusShortname = "borber-cn"
 
     ## Valine
-    enableValine = false
-    valineAppId = ""
-    valineAppKey = ""
+    enableValine = true
+    valineAppId = "PIuRARKT509XPdOdxA757zbX-MdYXbMMI"
+    valineAppKey = "MrsbvltXknb5SbiBO7tBDgln"
     valinePlaceholder = "Just go go"
     valinePath = ""
     valineAvatar = "mm"
@@ -612,7 +612,7 @@ uglyURLs = false
     # 说明：https://valine.js.org/
 
     ## Utterances
-    enableUtterances = true
+    enableUtterances = false
     utterancesRepo = "Borber/hugo-comment"
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
