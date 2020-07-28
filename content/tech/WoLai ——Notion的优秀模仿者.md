@@ -3,7 +3,7 @@ title: "WoLai ——Notion的优秀模仿者"
 gitinfo: true
 share: true
 comments: true
-slug: "hello"
+slug: "wolai"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/wolai/wolai.png"] 
 description: "一个优秀的模仿者"
 tags: ["笔记软件"]
