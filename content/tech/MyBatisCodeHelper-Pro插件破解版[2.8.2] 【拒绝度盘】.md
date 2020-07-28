@@ -6,7 +6,7 @@ comments: true
 slug: "MyBatisCodeHelper"
 images: ["https://github.com/Borber/PublicPic1/blob/master/ST/2x.jpg"] 
 description: "注意看对版本啊"
-tags: ["破解"]
+tags: ["破解", "拒绝度盘"]
 date: 2020-06-17T21:42:04+08:00
 ---
 
