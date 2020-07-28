@@ -586,9 +586,9 @@ uglyURLs = false
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
-    ## Disqus
+    ## 
     enableDisqus = true
-    disqusShortname = "https://borber.cn"
+    disqusShortname = "borber-cn"
 
     ## Valine
     enableValine = false
