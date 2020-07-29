@@ -22,7 +22,7 @@ date: 2020-07-20T17:59:04+08:00
 
 你可以查看下面这张图的地址 就是用本文的方法加载的
 
-![截图](https://cdn.jsdelivr.net/gh/Borber/PublicPic1/博客园/github图床/BORBER_2020-06-19_18-10-01.png)
+![截图](https://cdn.jsdelivr.net/gh/Borber/PublicPic1/博客园/github图床/BORBER_2020-06-19_18-10-01.png "创建仓库")
 
 ### 2/3 上传你的图片到库中
 
