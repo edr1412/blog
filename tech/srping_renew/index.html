@@ -1,0 +1,1528 @@
+<!doctype html><html lang=zh-cn><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta charset=utf-8><meta name=generator content="Hugo 0.73.0"><meta name=theme-color content="#fff"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=format-detection content="telephone=no, date=no, address=no, email=no"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><title>Spring 复习 | BORBER</title><link rel=stylesheet href=../../css/meme.min.34de7ee08d4b47e3b26c9a656f34b5ec7a72c401b50831f7c028e3beed4ba60e.css integrity="sha256-NN5+4I1LR+OybJplbzS17HpyxAG1CDH3wCjjvu1Lpg4="><script src=../../js/meme.min.cc27dae31eb444aac9a339b50158736e2cbb3aa112d2b4ea7c6e12a6e32b9921.js integrity="sha256-zCfa4x60RKrJozm1AVhzbiy7OqES0rTqfG4SpuMrmSE="></script><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Noto+Serif+SC:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript><meta name=author content="BORBER"><meta name=description content="复习资料... 博客园是加密的 不过这边就算了吧"><link rel="shortcut icon" href=../../favicon.ico type=image/x-icon><link rel=mask-icon href=../../icons/safari-pinned-tab.svg color=#2a6df4><link rel=apple-touch-icon sizes=180x180 href=../../icons/apple-touch-icon.png><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="BORBER"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=mobile-web-app-capable content="yes"><meta name=application-name content="BORBER"><meta name=msapplication-starturl content="../../"><meta name=msapplication-TileColor content="#fff"><meta name=msapplication-TileImage content="../../icons/mstile-150x150.png"><link rel=manifest href=../../manifest.json><link rel=canonical href=https://borber.cn/tech/srping_renew/><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","datePublished":"2020-07-07T14:07:04+08:00","dateModified":"2020-07-30T14:46:49+00:00","url":"https://borber.cn/tech/srping_renew/","headline":"Spring 复习","description":"复习资料... 博客园是加密的 不过这边就算了吧","inLanguage":"zh-CN","articleSection":"tech","wordCount":7263,"image":["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"],"author":{"@type":"Person","description":"跌宕歌词 纵横书卷 不与遣年华","email":"borber.drum@gmail.com","image":"https://borber.cn/icons/apple-touch-icon.png","url":"https://borber.cn/","name":"BORBER"},"license":"[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)","publisher":{"@type":"Organization","name":"BORBER","logo":{"@type":"ImageObject","url":"https://borber.cn/icons/apple-touch-icon.png"},"url":"https://borber.cn/"},"mainEntityOfPage":{"@type":"WebSite","@id":"https://borber.cn/"}}</script><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@BORBER_X"><meta name=twitter:creator content="@BORBER_X"><meta property="og:title" content="Spring 复习"><meta property="og:description" content="复习资料... 博客园是加密的 不过这边就算了吧"><meta property="og:url" content="https://borber.cn/tech/srping_renew/"><meta property="og:site_name" content="BORBER"><meta property="og:locale" content="zh"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"><meta property="og:type" content="article"><meta property="article:published_time" content="2020-07-07T14:07:04+08:00"><meta property="article:modified_time" content="2020-07-30T14:46:49+00:00"><meta property="article:section" content="tech"><link rel=preconnect href=https://www.google-analytics.com crossorigin><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-142130514-2','auto');ga('send','pageview');</script><script async src=https://www.google-analytics.com/analytics.js></script><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=borber&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@700&text=borber&display=swap"></noscript></head><body><div class=container><header class=header data-scroll-header><div class=header-wrapper><div class="header-inner single"><div class=site-brand><a href=../../ class=brand>BORBER</a></div><nav class=nav><ul class=menu id=menu><li class=menu-item><a href=../../life/><span class=menu-item-name>生活</span></a></li><li class=menu-item><a href=../../tech/><span class=menu-item-name>技术</span></a></li><li class=menu-item><a href=../../friend/><span class=menu-item-name>友链</span></a></li><li class=menu-item><a href=../../about/><span class=menu-item-name>关于</span></a></li><li class=menu-item><a id=theme-switcher href=#><span class="icon theme-icon-light">🌞</span><span class="icon theme-icon-dark">🌙</span></a></li></ul></nav></div></div><input type=checkbox id=nav-toggle aria-hidden=true>
+<label for=nav-toggle class=nav-toggle></label><label for=nav-toggle class=nav-curtain></label></header><main class="main single" id=main><div class=main-inner><article class="content post" data-align=justify data-type=tech data-toc-num=true><h1 class=post-title>Spring 复习</h1><div class=post-description>复习资料... 博客园是加密的 不过这边就算了吧</div><nav class=contents></nav><div class=post-body><ol><li><p>John is working in an IT firm and he created a web application for online shopping. He wants to use spring security to create the login form for this application. You are an expert in spring security so help John to create the login page.</p><p>When a user enters the login credential and clicks the login button, it will authenticate and authorized the user on the basis of the user's role and display its accessible page. Which one of the following code snippets will you use to implement the desired functionality in the Spring security configuration class?</p><p>@Spring security</p><p>注意 .and 的连接</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Override</span>
+   
+ <span class=kd>protected</span> <span class=kt>void</span> <span class=nf>configure</span><span class=o>(</span><span class=n>HttpSecurity</span> <span class=n>http</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{</span>
+   
+ <span class=n>http</span><span class=o>.</span><span class=na>authorizeRequests</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>antMatchers</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>).</span><span class=na>hasRole</span><span class=o>(</span><span class=s>&#34;EMPLOYEE&#34;</span><span class=o>)</span>
+   
+  <span class=o>.</span><span class=na>antMatchers</span><span class=o>(</span><span class=s>&#34;/leaders/**&#34;</span><span class=o>).</span><span class=na>hasRole</span><span class=o>(</span><span class=s>&#34;MANAGER&#34;</span><span class=o>)</span>
+   
+  <span class=o>.</span><span class=na>antMatchers</span><span class=o>(</span><span class=s>&#34;/systems/**&#34;</span><span class=o>).</span><span class=na>hasRole</span><span class=o>(</span><span class=s>&#34;ADMIN&#34;</span><span class=o>)</span>
+   
+  <span class=o>.</span><span class=na>and</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>formLogin</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>loginPage</span><span class=o>(</span><span class=s>&#34;/showMyLoginPage&#34;</span><span class=o>)</span>
+   
+  <span class=o>.</span><span class=na>loginProcessingUrl</span><span class=o>(</span><span class=s>&#34;/authenticateTheUser&#34;</span><span class=o>)</span>
+   
+  <span class=o>.</span><span class=na>permitAll</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>and</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>logout</span><span class=o>().</span><span class=na>permitAll</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>and</span><span class=o>()</span>
+   
+  <span class=o>.</span><span class=na>exceptionHandling</span><span class=o>().</span><span class=na>accessDeniedPage</span><span class=o>(</span><span class=s>&#34;/access-denied&#34;</span><span class=o>);</span>
+   
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You are creating a web application for booking hotel rooms. You are using spring to create this application using the default login page feature. This application required authentication during login. When the user login with a valid username “marry” and password “marry123” role, it will validate the user from in-memory data and will send him on the home page.</p><p>Which one of the following code snippets will you use to implement the desired functionality in the spring security configuration class?</p><p>@Spring security</p><p>调用的是 auth 的 ==inMemoryAuthentication== 方法</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=o>**</span><span class=nd>@Autowired</span><span class=o>**</span>
+   
+ <span class=o>**</span><span class=n>PasswordEncoder</span> <span class=n>passwordEncoder</span><span class=o>;**</span>
+   
+    
+   
+ <span class=o>**</span><span class=nd>@Override</span><span class=o>**</span>
+   
+ <span class=o>**</span><span class=kd>protected</span> <span class=kt>void</span> <span class=nf>configure</span><span class=o>(</span><span class=n>AuthenticationManagerBuilder</span> <span class=n>auth</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{**</span>
+   
+    
+   
+ <span class=o>**</span><span class=n>auth</span><span class=o>.</span><span class=na>inMemoryAuthentication</span><span class=o>()**</span>
+   
+ <span class=o>**.</span><span class=na>withUser</span><span class=o>(</span><span class=s>&#34;marry&#34;</span><span class=o>).</span><span class=na>password</span><span class=o>(</span><span class=n>passwordEncoder</span><span class=o>.</span><span class=na>encode</span><span class=o>(</span><span class=s>&#34;marry123&#34;</span><span class=o>)).</span><span class=na>roles</span><span class=o>(</span><span class=s>&#34;user&#34;</span><span class=o>);**</span>
+   
+    
+   
+ <span class=o>**}**</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You are a software engineer working in a software company. A client meeting held with you for the development of a brand promotional application. He wants when a user will log in with his credential he can see his role on his profile page. You have used the spring security framework to implement this concept.</p><p>Which one of the following code snippets will you use to implement the desired functionality in the spring view page?</p><p>@Spring security</p><p>搜索关键词 &lt;security: 首先是 authentication (认证) 其次对应变量名 <del>authorization (授权)</del></p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml> **User: <span class=nt>&lt;security:authentication</span> <span class=na>property=</span><span class=s>&#34;principal.username&#34;</span> <span class=nt>/&gt;</span>**
+ **Role(s): <span class=nt>&lt;security:authentication</span> <span class=na>property=</span><span class=s>&#34;principal.authorities&#34;</span> <span class=nt>/&gt;</span>**
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following class used to initialize spring security in spring MVC application?</p><p>@配置类</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>AbstractSecurityWebApplicationInitializer</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>which one of the following Allows for easily building in memory or JDBC based authentication?</p><p>@Spring security</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>AuthenticationManagerBuilder</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which one of the following class provides a set of methods that are used to enable specific web security configuration?</p><p>@Spring security</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>WebSecurityConfigurerAdapter</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>CSRF stands for:</p><p>@Spring security</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>Cross</span> <span class=n>Site</span> <span class=n>Request</span> <span class=n>forgery</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>you are a working as a software developer and you had developed a web application for a hotel room booking. When user login through the application he got following error page:</p><p>HTTP Status 403 – Forbidden</p><hr><p>Type Status Report</p><p>Message Forbidden</p><p>Description The server understood the request but refuses to authorize it.</p><hr><p>Apache Tomcat/9.0.31</p><p>Which of the following approach will you use to remove this error?</p><p>@Spring security</p><p>authorize 被拒绝</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;hidden&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;${_csrf.parameterName}&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;${_csrf.token}&#34;</span> <span class=p>/&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>john what to apply spring security in his application, Which class spring will register to use the springSecurityFilterChain before any other registered Filter?</p><p>@Spring security</p><p>关键词 springSecurityFilterChain</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>DelegatingFilterProxy</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>John wants to apply spring security in his web application but does not want in-memory data validation, he wants to store user credentials in the MySQL database. what code snippet will he use to get the desired result?</p><p>@Spring security</p><p>jdbcAuthentication</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Autowired</span>
+    
+ <span class=kd>private</span> <span class=n>DataSource</span> <span class=n>securityDataSource</span><span class=o>;</span>
+    
+ <span class=nd>@Override</span>
+    
+ <span class=kd>protected</span> <span class=kt>void</span> <span class=nf>configure</span><span class=o>(</span><span class=n>AuthenticationManagerBuilder</span> <span class=n>auth</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{</span>
+    
+ <span class=n>auth</span><span class=o>.</span><span class=na>jdbcAuthentication</span><span class=o>().</span><span class=na>dataSource</span><span class=o>(</span><span class=n>securityDataSource</span><span class=o>);</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>What is JSON data binding?</p><p>@json</p><pre><code>Serialization/deserialization
+    
+Marshalling/Unmarshalling
+    
+conversion of JSON data to java POJO and vice versa
+</code></pre></li><li><p>John is a software developer in FIS technology and he has used REST API in his web Application, now he wants to access a single student object in result on the basis of given ID What code snippet will he use to get the desired result?</p><p>@REST API</p><p>获取 单个 数据</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@GetMapping</span><span class=o>(</span><span class=s>&#34;/student/{studentId}&#34;</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>StudentBo</span> <span class=nf>getStudentById</span><span class=o>(</span><span class=nd>@PathVariable</span> <span class=kt>int</span> <span class=n>studentId</span><span class=o>)</span>
+    
+</code></pre></td></tr></table></div></div></div></li><li><p>REST API will only accept JSON requests and respond back with JSON responses for that ________________ library is used?</p><p>@REST API</p><p>只使用了 Jackson</p><pre><code>Jackson library
+</code></pre></li><li><p>The most important class in REST web service is _______________ which acts as the interface for client/server communication.</p><p>@REST API</p><p>Controller 是 接口</p><pre><code>Controller
+</code></pre></li><li><p>For implementing REST web Service john had used @RestController annotation. Which one of the following is true about @RestController?</p><p>@REST API</p><pre><code>@RestController annotation marks the class as a Resource
+    
+it defines implicitly both @Controller and @ResponseBody MVC annotations
+</code></pre></li><li><p>Which one of the following annotation is used to load application.properties file in the REST web application?</p><p>@REST API</p><pre><code>@PropertySource
+</code></pre></li><li><p>John is working in Software Company as a developer, he has developed a web application following client-server architecture and he wants to implement Spring REST API on client application for getting the list of the students from the database. Which of the following code snippet he will use to get the desired result?</p><p>@REST API</p><p>获取 列表 数据</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Override</span>
+    
+<span class=kd>public</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;</span> <span class=nf>getStudent</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=n>ResponseEntity</span><span class=o>&lt;</span><span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;&gt;</span> <span class=n>responseEntity</span> <span class=o>=</span> <span class=n>restTemplate</span><span class=o>.</span><span class=na>exchange</span><span class=o>(</span><span class=n>studentRestUrl</span><span class=o>,</span> <span class=n>HttpMethod</span><span class=o>.</span><span class=na>GET</span><span class=o>,</span> <span class=kc>null</span><span class=o>,</span><span class=k>new</span> <span class=n>ParameterizedTypeReference</span><span class=o>&lt;</span><span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;&gt;()</span> <span class=o>{});</span>
+    
+<span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;</span> <span class=n>students</span> <span class=o>=</span> <span class=n>responseEntity</span><span class=o>.</span><span class=na>getBody</span><span class=o>();</span>
+    
+<span class=k>return</span> <span class=n>students</span><span class=o>;</span>
+    
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Mr. Ben working in an IT firm developed a web application following the client-server architecture of the spring framework. He had configured REST client but on execution did not get the correct result. You are a spring Developer so which of the code snippet will you suggest to MR. Ben to get the desired result?</p><p>@REST API @配置类</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@ComponentScan</span><span class=o>(</span><span class=n>basePackages</span> <span class=o>=</span> <span class=o>{</span><span class=s>&#34;com.niit&#34;</span><span class=o>})</span>
+    
+<span class=nd>@PropertySource</span><span class=o>(</span><span class=s>&#34;classpath:application.properties&#34;</span><span class=o>)</span>
+    
+<span class=nd>@Configuration</span>
+    
+<span class=nd>@EnableWebMvc</span>
+    
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>WebConfig</span> <span class=kd>implements</span> <span class=n>WebMvcConfigurer</span> <span class=o>{</span>
+    
+ <span class=nd>@Bean</span>
+    
+ <span class=kd>public</span> <span class=n>RestTemplate</span> <span class=nf>restTemplate</span><span class=o>()</span> <span class=o>{</span>
+    
+  <span class=k>return</span> <span class=k>new</span> <span class=n>RestTemplate</span><span class=o>();</span>
+    
+ <span class=o>}</span>
+    
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which one of the following annotations are used on a controller to handle all kind of exception in Spring web application?</p><p>@Controller</p><p>全局异常处理</p><pre><code>@ControllerAdvice
+</code></pre></li><li><p>John has developed a web application. But when he was testing his application he got the ugly result as an output. He wants to return a meaningful result on exception raised. He wants to use @ResponseStatus annotation on custom exception class handling class to return the meaningful result. which one of the following code snippets satisfied his need?</p></li></ol><p>@ResponseStatus</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>org</span><span class=o>.</span><span class=na>springframework</span><span class=o>.</span><span class=na>http</span><span class=o>.</span><span class=na>HttpStatus</span><span class=o>;</span>
+
+<span class=kn>import</span> <span class=nn>org.springframework.web.bind.annotation.ResponseStatus</span><span class=o>;</span>
+
+ 
+
+<span class=nd>@ResponseStatus</span><span class=o>(</span><span class=n>value</span> <span class=o>=</span> <span class=n>HttpStatus</span><span class=o>.</span><span class=na>NOT_FOUND</span><span class=o>,</span> <span class=n>reason</span> <span class=o>=</span> <span class=s>&#34;No such Keyword&#34;</span><span class=o>)</span>
+
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>KeywordNotFoundException</span> <span class=kd>extends</span> <span class=n>RuntimeException</span> <span class=o>{</span>
+
+<span class=kd>public</span> <span class=nf>KeywordNotFoundException</span><span class=o>(</span><span class=n>String</span> <span class=n>key</span><span class=o>){</span>
+
+<span class=kd>super</span><span class=o>(</span><span class=n>key</span><span class=o>+</span><span class=s>&#34; not available&#34;</span><span class=o>);</span>
+</code></pre></td></tr></table></div></div></div><ol start=21><li><p>In how many ways exception can be handled in spring application?</p><p>@异常处理 @exception</p><pre><code>4
+</code></pre></li><li><p>In Spring MVC application on which layer @ResponseStatus annotation is applied?</p><p>@ResponseStatus</p><pre><code>Custome exception classs
+Controller’s method
+</code></pre></li><li><p>John has developed a web application but for unexpected failure he wants to handle Exception in his spring web application using ExceptionResolver class. Which one of the following code snippets John will use to configure Exception bean in spring configuration file?</p><p>@异常处理 @exception @ExceptionResolver</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Bean</span>
+    
+<span class=kd>public</span> <span class=n>SimpleMappingExceptionResolver</span> <span class=nf>resolveException</span><span class=o>()</span> <span class=o>{</span>
+    
+ <span class=n>SimpleMappingExceptionResolver</span> <span class=n>resolver</span><span class=o>=</span> <span class=k>new</span> <span class=n>SimpleMappingExceptionResolver</span><span class=o>();</span>
+    
+ <span class=n>Properties</span> <span class=n>erpProperties</span><span class=o>=</span> <span class=k>new</span> <span class=n>Properties</span><span class=o>();</span>
+    
+ <span class=n>erpProperties</span><span class=o>.</span><span class=na>setProperty</span><span class=o>(</span><span class=s>&#34;DataLostException&#34;</span><span class=o>,</span> <span class=s>&#34;globalError&#34;</span><span class=o>);</span>
+    
+ <span class=n>erpProperties</span><span class=o>.</span><span class=na>setProperty</span><span class=o>(</span><span class=s>&#34;BadDataException&#34;</span><span class=o>,</span> <span class=s>&#34;error&#34;</span><span class=o>);</span>
+    
+ <span class=n>erpProperties</span><span class=o>.</span><span class=na>setProperty</span><span class=o>(</span><span class=s>&#34;NullPointerException&#34;</span><span class=o>,</span> <span class=s>&#34;globalError&#34;</span><span class=o>);</span>
+    
+ <span class=n>resolver</span><span class=o>.</span><span class=na>setExceptionMappings</span><span class=o>(</span><span class=n>erpProperties</span><span class=o>);</span>
+    
+ <span class=n>resolver</span><span class=o>.</span><span class=na>setDefaultErrorView</span><span class=o>(</span><span class=s>&#34;404-page&#34;</span><span class=o>);</span>
+    
+ <span class=n>resolver</span><span class=o>.</span><span class=na>setExceptionAttribute</span><span class=o>(</span><span class=s>&#34;exc&#34;</span><span class=o>);</span>
+    
+ <span class=k>return</span> <span class=n>resolver</span><span class=o>;</span>
+    
+<span class=o>}</span> 
+</code></pre></td></tr></table></div></div></div></li><li><p>Marry has developed web application and also applied spring exception handling using HandlerMappingExceptionResolver. She wants to map error type with the view name. Which of the following HandlerMappingExceptionResolver class she will use to map the exception type with the view name?</p><p>@HandlerMappingExceptionResolver</p><pre><code>SimpleMappingExceptionResolver
+</code></pre></li><li><p>John working in a software company as a Spring developer. He developed an web application for ticket booking. Since he is new in spring framework he does not know how to handle global exception using spring exception handling API. You are an expert in spring framework so what code snippet you will suggest john to handle global exception?</p></li><li><p>@异常 @全局异常</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>org</span><span class=o>.</span><span class=na>springframework</span><span class=o>.</span><span class=na>web</span><span class=o>.</span><span class=na>bind</span><span class=o>.</span><span class=na>annotation</span><span class=o>.</span><span class=na>ControllerAdvice</span>
+    
+<span class=n>org</span><span class=o>.</span><span class=na>springframework</span><span class=o>.</span><span class=na>web</span><span class=o>.</span><span class=na>bind</span><span class=o>.</span><span class=na>annotation</span><span class=o>.</span><span class=na>ExceptionHandler</span>
+    
+     
+    
+<span class=nd>@ControllerAdvice</span>
+    
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>GlobalExceptionHandlerController</span> <span class=o>{</span>
+    
+ <span class=nd>@ExceptionHandler</span><span class=o>(</span><span class=n>IOException</span><span class=o>.</span><span class=na>class</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=n>ModelAndView</span> <span class=nf>handleMyException</span><span class=o>(</span><span class=n>Exception</span> <span class=n>ex</span><span class=o>)</span> <span class=o>{</span>
+    
+    
+ <span class=n>ModelAndView</span> <span class=n>model</span><span class=o>=</span> <span class=k>new</span> <span class=n>ModelAndView</span><span class=o>();</span>
+    
+ <span class=n>model</span><span class=o>.</span><span class=na>addObject</span><span class=o>(</span><span class=s>&#34;exc&#34;</span><span class=o>,</span> <span class=n>ex</span><span class=o>);</span>
+    
+ <span class=n>model</span><span class=o>.</span><span class=na>setViewName</span><span class=o>(</span><span class=s>&#34;globalError&#34;</span><span class=o>);</span>
+    
+ <span class=k>return</span> <span class=n>model</span><span class=o>;</span>
+     
+ <span class=o>}</span>
+    
+    
+ <span class=nd>@ExceptionHandler</span><span class=o>(</span><span class=n>RecordNotFoundException</span><span class=o>.</span><span class=na>class</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=n>String</span> <span class=nf>handleNotFound</span><span class=o>()</span> <span class=o>{</span>
+    
+ <span class=k>return</span><span class=s>&#34;404-page&#34;</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which one of the following package can be used to implement global exception controller in spring web application?</p><p>@异常 @ControllerAdvice</p><pre><code>org.springframework.web.bind.annotation.ControllerAdvice
+</code></pre></li><li><p>The Spring framework promotes the concept of loose coupling through _______________.</p><p>@解耦</p><pre><code>DI
+</code></pre></li><li><p>__________ is used to load the bean configuration file located at the specified class path.</p><p>@配置</p><pre><code>ClassPathXmlApplicationContext
+</code></pre></li><li><p>Daniel has to create a Web application in such a way that there is clear separation between the application model and the application logic from the application's UI. Which module of the Spring framework should he use to enable this segregation?</p><p>@模式 @逻辑与UI</p><pre><code>MVC
+</code></pre></li><li><p>You have implemented a type of autowiring in your application, such that the Spring framework attempts to wire the bean by first using constructor, and then byType, if there is a default no-args constructor. Which type of autowiring is this?</p><p>@Autowire</p><pre><code>byType
+</code></pre></li><li><p>The Spring framework is a popular non-standard open source framework developed by ______________.</p><p>@Spring</p><pre><code>Interface21 Inc
+</code></pre></li><li><p>When _________ property is set to byName, Spring will attempt to find a bean whose name matches the name of the property being wired.</p><p>@Autowire</p><pre><code>Autowire
+</code></pre></li><li><p>You have created a Web application, where you are required to apply enterprise services, such as transaction management, security, logging, and messaging services with the help of java configuration files. Which module of the Spring framework should you use to do this?</p><blockquote><p>您已经创建了一个Web应用程序，您需要在java配置文件的帮助下应用企业服务，如事务管理、安全、日志和消息服务。您应该使用Spring框架中的哪个模块来实现这一点？</p></blockquote><p>@模式</p><pre><code>AOP
+</code></pre></li><li><p>You have declared a bean named ball in the Spring configuration file. Now, you have to pass this bean as a reference to another bean. Which attribute of the <property>tag will you use to accomplish this task?</p><p>@property</p><pre><code>Ref
+</code></pre></li><li><p>State whether the given statements as true or false :</p><p>[A] Spring is a layered architecture framework that allows you to create tightly coupled business logic components</p><p>[B] In traditional J2EE approach, any change in the business logic is likely to impact the entire application code.</p><pre><code>A is false, B is true
+</code></pre></li><li><p>Consider the following statements:</p><p>Statement A: Spring aims to minimize the dependence of the application code on its framework.</p><p>Statement B: Spring applications are not required to perform API lookup.</p><pre><code>Both A and B is true
+</code></pre></li><li><p>Which of the following features of Spring framework allows you to associate business layer objects with each other, using XML configuration files?</p><p>@XML</p><pre><code>Pluggability
+</code></pre></li><li><p>Which of the following statements regarding Spring framework is not true?</p><pre><code> True:
+     
+ The Spring MVC framework provides a clear seperation between the controllers, models and views.
+ // Spring MVC框架在控制器、模型和视图之间提供了一个清晰的分界。
+ The Spring MVC supports several view technologies such as JSP, Velocity , Tiles and JSF.
+ // Spring MVC支持多种视图技术，如JSP、Velocity、Tiles和JSF。
+ The Spring MVC Web applications are easier to test than the Struts MVC Web applications.
+ //与Struts MVC Web应用相比，Spring MVC Web应用更容易测试
+     
+ False:
+ In Spring-enabled Web applications, the validation is implemented with the help of the validate() method of the ActionForm class
+ //在支持Spring的Web应用程序中，验证是在ActionForm类的validate()方法的帮助下实现的。
+</code></pre></li><li><p>Which of the following layers of the Spring Architecture provides an exception hierarchy for managing database connections and handling exceptions and complicated error messages?</p><p>@Database</p><pre><code>DAO
+</code></pre></li><li><p>Which of the following values of the scope attribute of the bean element within the bean configuration file, provides a single instance of a bean with a particular name and places it in the factory?</p><p>@scope</p><pre><code>Prototype
+</code></pre></li><li><p>Dorothy is working in a spring application where she has stored the Spring-Config-xml file within the Sports folder located at the class path of the application. Now she wishes to create a BeanFactory object with the given configuration file. Which of the following code do you think would be correct in this case?</p><p>@配置</p><pre><code>Resource res = new ClassPathResource(Sports/Spring-Config.xml);
+    
+BeanFactory factory = new XMLBeanFactory(res);
+</code></pre></li><li><p>In Which of the following stages of the lifecycle of a bean inside a Bean Factory container, we perform certain types of initialization tasks before the beans are ready to be used. These include opening a file, opening a network or database connection, and allocating memory.</p><p>@Bean</p><pre><code>Initialize Beans
+</code></pre></li><li><p>Which of the following implementation of the application context container is used to load the bean configuration file from the location specified by the contextConfigLocation context parameter n the web.xml file?</p><p>@配置</p><pre><code>XmlWebApplicationContext
+</code></pre></li><li><p>State whether the following statements are true or false.</p><p>Statement A: In a Spring-enabled application, the objects are not responsible for searching or creating other dependent objects.</p><p>Statement B: The Spring container manager creation that manages creation of the objects, their life cycle and collaboration with other objects.</p><pre><code>Both A and B is true
+</code></pre></li><li><p>Which of the following MVC component accepts a user request and pass it to a proper model for process, and present a proper view to the user based on the result?</p><pre><code>Controller
+</code></pre></li><li><p>Please select the right order of the life cycle of a Spring MVC request</p><ol><li><p>Request goes through the front-end controller, i.e, DispatcherServlet</p></li><li><p>Render view pages, and deliver model data, and render response in the browser.</p></li><li><p>Request goes through the service layer, and real business logic processing the request is implemented.</p></li><li><p>Revert a request to a proper controller based on the mapping handler.</p></li><li><p>The controller send the request to the DispatcherServlet with a view name and data to be presented on the view.</p></li></ol><p>@排序</p><pre><code>1 &gt; 4 &gt; 3 &gt; 5 &gt; 2
+</code></pre></li><li><p>Which implementation of the Resource Interface can be used for defining a resource, retrieved from the specified class path?</p><p>@ClassPathResource</p><pre><code>org.springframework.core.io.ClassPathResource
+</code></pre></li><li><p>Please select the right order of the life cycle of a Spring MVC request</p><ol><li><p>Request goes through the front-end controller, i.e, DispatcherServlet</p></li><li><p>Render view pages, and deliver model data, and render response in the browser.</p></li><li><p>Request goes through the service layer, and real business logic processing the request is implemented.</p></li><li><p>Revert a request to a proper controller based on the mapping handler.</p></li><li><p>The controller send the request to the DispatcherServlet with a view name and data to be presented on the view.</p></li></ol><p>@排序</p><pre><code>4 &gt; 1 &gt; 5 &gt; 3 &gt; 2
+</code></pre></li><li><p>Which of the following code snippet can be placed in front of a method to map a method to a post request?</p><p>此处直接注意 RequestMethod.POST</p><pre><code>@RequestMapping(value=&quot;/addProduct&quot; , method=RequestMethod.POST)
+</code></pre></li><li><p>Spring provides rich support for ______ that separates the application logic from the system-level services, such as transaction management, logging, and security.</p><p>@log</p><pre><code>AOP
+</code></pre></li><li><p>You can wire the bean properties in a Spring-enabled application by declaring a _________ element for the bean in the configuration file within the <bean>tag.</p><p>@Bean</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;property&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You need to create a Spring-enabled web application for ToyZone Inc. In addition, you need to use Hibernate to provide data persistence. Which module of the Spring framework will you use to integrate Spring with Hibernate?</p><p>@Hibernate</p><pre><code>ORM
+</code></pre></li><li><p>Which of the following is used to map a user request to a proper controller object directly and is one of the simplest HandlerMapping ?</p><p>@HandlerMapping</p><pre><code>SimpleUrlHandlerMapping
+</code></pre></li><li><p>Which of the following code snippet maps the request “/addStudent.htm” to a controller named AddController under the com.niit.controller package?</p><p>@map</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;handlerMapping&#34;</span> <span class=na>class=</span><span class=s>&#34;org.springframework.web.servlet.handler.BeanNameUrlHandlerMappin&lt;/bean&gt;
+</span><span class=s>    
+</span><span class=s>&lt;bean name=&#34;</span><span class=err>/addStudent.htm&#34;</span> <span class=na>class=</span><span class=s>&#34;com.niit.controller.AddController&#34;</span><span class=nt>&gt;&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following options helps you to bind a bean property to a form component?</p><p>@bind</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;spring:bind&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following is not an advantage of Spring MVC Framework?</p><pre><code> True:
+     
+ Reusable code
+    
+ Easy to test
+    
+ Simple and powerful tag library
+     
+ False:
+     
+ Heavy-weight development environment
+     
+</code></pre></li><li><p>Which of the following component in Spring MVC enables the DispatcherServlet to send request to a proper controller?</p><p>@Controller</p><pre><code>Mapping Handler
+</code></pre></li><li><p>Which of the following class represents the DispatcherServlet class?</p><p>@DispatcherServlet</p><pre><code>org.springframework.web.servlet.DispatcherServlet
+</code></pre></li><li><p>Victor has created a spring application where she wants to inject the dependency of the application objects using setter method. She has written the following code:</p><p>@setter code</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>class</span> <span class=nc>finance</span><span class=o>{</span>
+    
+ <span class=n>ManagementStudent</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=n>ManagementStudent</span> <span class=nf>getManagementStudent</span><span class=o>()</span> <span class=o>{</span>
+    
+  <span class=k>return</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+     
+    
+ <span class=nd>@Autowired</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>setManagementStudent</span><span class=o>(</span><span class=n>ManagementStudent</span> <span class=n>managementStudent</span><span class=o>)</span> <span class=o>{</span>
+    
+  <span class=k>this</span><span class=o>.</span><span class=na>managementStudent</span> <span class=o>=</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+     
+    
+<span class=kd>class</span> <span class=nc>HumanResource</span><span class=o>{</span>
+    
+ <span class=n>ManagementStudent</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=n>ManagementStudent</span> <span class=nf>getManagementStudent</span><span class=o>()</span> <span class=o>{</span>
+    
+  <span class=k>return</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+    
+ <span class=nd>@Autowired</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>setManagementStudent</span><span class=o>(</span><span class=n>ManagementStudent</span> <span class=n>managementStudent</span><span class=o>)</span> <span class=o>{</span>
+    
+  <span class=k>this</span><span class=o>.</span><span class=na>managementStudent</span> <span class=o>=</span> <span class=n>managementStudent</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Issac wants to implement constructor injection for the property “type” of the Games class defined in the Gaming Package as given in the following code :</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nn>Gaming</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=kd>class</span> <span class=nc>Games</span><span class=o>{</span>
+    
+ <span class=n>String</span> <span class=n>type</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=nf>Games</span><span class=o>(</span><span class=n>String</span> <span class=n>type</span><span class=o>){</span>
+     
+    <span class=k>this</span><span class=o>.</span><span class=na>type</span> <span class=o>=</span> <span class=n>type</span><span class=o>;</span>
+ <span class=o>}</span>
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>Which of the following code should Issac use in the given scenario ?</p><p>@type code</p><pre><code>&lt;bean id=&quot;racing&quot; class=&quot;Gaming.Games&quot;&gt;
+    
+ &lt;constructor-arg value=&quot;Racing&quot;&gt;
+    
+&lt;/bean&gt;
+</code></pre></li><li><p>In which of the following autowiring technique, Spring will find a bean by the property name of the property being wired?</p><pre><code>byname
+</code></pre></li><li><p>Consider the following statements:</p><p>Statement A: Autowiring through Autodetect is a type of autowiring that you can use when you cannot decide which type of wiring is to be used for wiring a bean and its property.</p><p>Statement B: Spring provides default autowiring mode that will be used for wiring all the beans to their respective bean properties in your application.</p><pre><code>Both A and B is true
+</code></pre></li><li><p>Rain has written the given code in her Spring Application.</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>63</span><span class=o>.</span> <span class=kn>package</span> <span class=nn>Work</span><span class=o>;</span>
+    
+ <span class=kd>interface</span> <span class=nc>Engineer</span><span class=o>{</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>build</span><span class=o>();</span>
+    
+ <span class=o>}</span>
+     
+ <span class=kd>public</span> <span class=kd>class</span> <span class=nc>MechanicalEngineer</span> <span class=kd>implements</span> <span class=n>Engineer</span>
+    
+ <span class=o>{</span>
+    
+ <span class=n>String</span> <span class=n>tool</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=nf>MechanicalEngineer</span><span class=o>(</span><span class=n>String</span> <span class=n>tool</span><span class=o>)</span>
+    
+ <span class=o>{</span>
+    
+ <span class=k>this</span><span class=o>.</span><span class=na>tool</span> <span class=o>=</span> <span class=n>tool</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+ <span class=nd>@Override</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>build</span><span class=o>()</span>
+    
+ <span class=o>{</span>
+    
+ <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;I am building with a&#34;</span><span class=o>+</span><span class=n>tool</span><span class=o>);</span>
+    
+ <span class=o>}</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>setTool</span><span class=o>(</span><span class=n>String</span> <span class=n>tool</span><span class=o>)</span>
+    
+ <span class=o>{</span>
+    
+ <span class=k>this</span><span class=o>.</span><span class=na>tool</span> <span class=o>=</span> <span class=n>tool</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>Now she wants to create a MechanicalEnginner objects using the Spring wiring for which she has written the following code:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;ME&#34;</span> <span class=na>class=</span><span class=s>&#34;Work.Engineer&#34;</span><span class=nt>&gt;</span>
+    
+    <span class=nt>&lt;constructor-arg</span> <span class=na>value=</span><span class=s>&#34;Hammer&#34;</span><span class=nt>&gt;</span>
+    
+    <span class=nt>&lt;property</span> <span class=na>name=</span><span class=s>&#34;tool&#34;</span> <span class=na>value=</span><span class=s>&#34;Axle&#34;</span><span class=nt>&gt;</span>
+<span class=nt>&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div><p>In the main method she has written the following code :</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>){</span>
+    
+<span class=n>ApplicationContext</span> <span class=n>ac</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ClassPathXmlApplicationContext</span><span class=o>(</span><span class=s>&#34;Spring-Config.xml&#34;</span><span class=o>)</span> <span class=o>;</span> 
+    
+<span class=n>MechanicalEngineer</span> <span class=n>ob</span> <span class=o>=</span> <span class=o>(</span><span class=n>MechanicalEngineer</span><span class=o>)</span><span class=n>ac</span><span class=o>.</span><span class=na>getBean</span><span class=o>(</span><span class=s>&#34;ME&#34;</span><span class=o>);</span>
+    
+<span class=n>ob</span><span class=o>.</span><span class=na>build</span><span class=o>();</span>
+    
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>What according to you should be the output of the given code?</p><pre><code>Throw an exception
+</code></pre></li><li><p>Which type of exception is thrown if more than one matching bean is found whose type matches with the type of the property being wired in case of “byType” autowiring?</p><p>@byType</p><pre><code>org.springframework.beans.factory.UnsatisfiedDependencyException
+</code></pre></li><li><p>Which of the following functionalities is provided by a bean factory container?</p><pre><code>//不提供
+ It provides a generic way to load file resources, such as images.
+    
+ It provides a means for resolving text messages, including support for internationalization of those messages.
+     
+ It publishes events to beans, which are registered as listeners.
+     
+//提供 It is used to define relationships between different objects, as and when they are instantiated.
+</code></pre></li><li><p>Which method of the ApplicationContextAware interface is called during the SetApplicationContext phase of the Life Cycle of a bean in the Application Context?</p><p>@SetApplicationContext</p><pre><code>setApplicationContext()
+</code></pre></li><li><p>Arrange the given phases of the life cycle of a bean inside the ApplicationContext Container in order of their execution?</p><p>I. Pre-Initialization</p><p>II. SetApplicationContext</p><p>III. Initialize Beans</p><p>IV. Set Bean Factory</p><p>@排序</p><pre><code>Iv ii I iii
+</code></pre></li><li><p>Regan has created a spring-config.xml in his local drive in the D:\Sports directory. Now he wants to load the Config file into his WebApplication with a particular ApplicationContext implementation?</p><p>Which of the following code would be appropriate for him?</p><p>@配置</p><p>@ApplicationContext</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>ApplicationContext</span> <span class=n>ac</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileSystemXmlApplicationContext</span><span class=o>(</span><span class=s>&#34;D:/Sports/spring-config.xml&#34;</span><span class=o>);</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following file in Spring MVC Framework is used to send a request to the DispatcherServlet to begin processing the user’s request?</p><p>@配置</p><pre><code>web.xml
+</code></pre></li><li><p>Which of the following is not a supported ViewResolver type in Spring MVC Framework?</p><pre><code>XMLViewResolver // ML 小写就对了
+    
+//支持
+BeanNameViewResolver
+InternalResourceViewResolver
+ResourceBundleViewResolver
+    
+</code></pre></li><li><p>Which of the following component implements real business logic for processing a Spring request?</p><pre><code>Service Component
+</code></pre></li><li><p>Which of the following configuration implements configuring the view resolver correctly?</p><p>@配置 @配置类</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Bean</span>
+    
+<span class=kd>public</span> <span class=n>ViewResolver</span> <span class=nf>resolveView</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+<span class=n>InternalResourceViewResolver</span> <span class=n>viewResolver</span><span class=o>=</span> <span class=k>new</span> <span class=n>InternalResourceViewResolver</span><span class=o>();</span>
+    
+<span class=n>viewResolver</span><span class=o>.</span><span class=na>setPrefix</span><span class=o>(</span><span class=s>&#34;/WEB-INF/jsp/&#34;</span><span class=o>);</span>
+    
+<span class=n>viewResolver</span><span class=o>.</span><span class=na>setSuffix</span><span class=o>(</span><span class=s>&#34;.jsp&#34;</span><span class=o>);</span>
+    
+<span class=k>return</span> <span class=n>viewResolver</span><span class=o>;</span>
+    
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following code snippet can be used in web.xml to specify the location of a spring xml file named spring-config.xml under the com.niit.config package and notifies application to load the file once the application starts?</p><p>@配置</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;</span>
+    
+      
+    
+  <span class=nt>&lt;init-param&gt;</span>
+    
+   <span class=nt>&lt;param-name&gt;</span>contextConfigLocation<span class=nt>&lt;/param-name&gt;</span>
+    
+   <span class=nt>&lt;param-value&gt;</span>/WEB-INF/spring-config.xml<span class=nt>&lt;/param-value&gt;</span>
+    
+  <span class=nt>&lt;/init-param&gt;</span>
+    
+  <span class=nt>&lt;load-on-startup&gt;</span>1<span class=nt>&lt;/load-on-startup&gt;</span>
+    
+     
+    
+<span class=nt>&lt;/servlet&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Which of the following is not an advantage of Spring MVC framework?</p><p>@advantage</p><pre><code>Heavy weight development environment
+</code></pre></li><li><p>____________ receives the request from dispatcher servlet, and forwards it to service classes for processing.</p><pre><code>Controller
+</code></pre></li><li><p>_____________ is an implementation of the Map interface. It is used when you want to encapsulate business data into a model.</p><p>@map</p><pre><code>ModelMap
+</code></pre></li><li><p>Consider the following code snippet:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;</span>
+    
+  <span class=nt>&lt;servlet-name&gt;</span>dispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+    
+  <span class=nt>&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class=nt>&lt;/servlet-class&gt;</span>
+    
+  <span class=nt>&lt;load-on-startup&gt;</span>1<span class=nt>&lt;/load-on-startup&gt;</span>
+    
+ <span class=nt>&lt;/servlet&gt;</span>
+</code></pre></td></tr></table></div></div></div><p>The load-on-startup element defines :</p><pre><code>Which servlet is initialized first
+</code></pre></li><li><p>Consider the following code snippet:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;</span>
+    
+  <span class=nt>&lt;servlet-name&gt;</span>TicketDispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+    
+  <span class=nt>&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class=nt>&lt;/servlet-class&gt;</span>
+    
+ <span class=nt>&lt;load-on-startup&gt;</span>1<span class=nt>&lt;/load-on-startup&gt;</span>
+    
+<span class=nt>&lt;/servlet&gt;</span>
+</code></pre></td></tr></table></div></div></div><p>The springapplication context is loaded from a file named ________________.</p><pre><code>TicketDispatcher-Servlet.xml
+</code></pre></li><li><p>Statement A: AOP feature of Spring Framework attempts to solve the problem of cross-cutting concerns by allowing developer to express in modules called aspects</p><p>Statement B: After identifying aspects, developers need to identify advice, joinpoint, and pointcuts.</p><p>@AOP</p><pre><code>Both A and B is true
+</code></pre></li><li><p>What does JSF use to locate the beans that are managed within the JSF application?</p><p>@JSF</p><pre><code>Bean variable resolver
+</code></pre></li><li><p>Keane needs to create an application where he has to integrate Spring with Hibernate. While creating this application, he felt the need for using a design pattern in his application that would enable him to perform the following tasks easily:</p><ul><li>To communicate with the database layer and to separate persistence code from the application logic.</li><li>To create maintainable application code.</li><li>To easily change the ORM tool without any need for changing the application code.</li></ul><p>Which of the following design patterns should he implement in his application so as to perform the preceding tasks easily ?</p><p>@模式</p><pre><code>DAO
+</code></pre></li><li><p>You are creating a Web application for the book shop by using Spring MVC. When a user sends a request for the URL, /SearchBook.htm page in this Web application, the request needs to be handled by the SearchBookController class defined in the controller package of the Web application. For this, you used the following code snippet:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;beans&gt;</span>
+    
+    <span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;ControllerHandlerMapping&#34;</span> <span class=na>class=</span><span class=s>&#34;org.springframework.web.servlet.mvc.support.SimpleUrlHandlerMapping&#34;</span><span class=nt>/&gt;</span>
+    
+    <span class=nt>&lt;bean</span> <span class=na>class=</span><span class=s>&#34;controller.SearchBookController&#34;</span><span class=nt>&gt;</span>
+    
+<span class=nt>&lt;/beans&gt;</span>
+</code></pre></td></tr></table></div></div></div><p>However, the preceding code snippet does not forward the request to the SearchBookController class. Analyze the problem and provide the correct code snippet.</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;beans&gt;</span>
+    
+    <span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;ControllerHandlerMapping&#34;</span> <span class=na>class=</span> <span class=s>&#34;org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping&#34;</span><span class=nt>/&gt;</span>
+    
+    <span class=nt>&lt;bean</span> <span class=na>class=</span><span class=s>&#34;controller.SearchBookController&#34;</span><span class=nt>/&gt;</span>
+    
+<span class=nt>&lt;/beans&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You are creating a Web application for booking hotel rooms online. You are using Spring to create this application. When a user accesses the BookRoom.htm Web page of this application, the dispatcher servlet needs to forward the request for accessing this Web page to the BookRoomController class defined in the controller package. For this, you need to map the URL, /BookRoom.htm, with the BookRoomController class. Which of the following code snippets should you use to implement this functionality?</p><p>@map</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;beans&gt;</span>
+    
+<span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;beanhandlermapping&#34;</span> <span class=na>class=</span> <span class=s>&#34;org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping&#34;</span><span class=nt>/&gt;</span>
+    
+<span class=nt>&lt;bean</span> <span class=na>name=</span><span class=s>&#34;/BookRoom.htm&#34;</span> <span class=na>class=</span><span class=s>&#34;controller.BookRoomController&#34;</span><span class=nt>/&gt;</span>
+    
+<span class=nt>&lt;/beans&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>When a server receives a request, it reads the web.xml file of the Web application and forwards the request to the dispatcher servlet. What action is now performed by the dispatcher servlet?</p><p>@dispatcher</p><pre><code>The dispatcher servlet consults one or more of its handler mappings to determine the appropriate controller of the request.
+    
+//调度器servlet参考其一个或多个处理程序映射来确定请求的适当控制器。
+</code></pre></li><li><p>For an online banking Web application, the primary logic is to transfer funds, which is implemented in the transferFunds() method. You need to specify that the location where the advices of this application can be applied is the transferFunds() method. Which of the following options will you use to perform this task?</p><p>@AOP</p><pre><code>Define pointcut
+</code></pre></li><li><p>Which feature of Spring increases modularity by isolating secondary logic from the primary logic?</p><p>@AOP</p><pre><code>Aspect-oriented programming
+</code></pre></li><li><p>How many attribute does the @AfterReturning contain?</p><p>@AfterReturning</p><pre><code>2
+</code></pre></li><li><p>You are creating a Web application by using JSF. After creating the user interfaces, you created a bean named Student in the application. Then, you configured this bean using @ManagedBean annotation as in the following code snippet:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Component</span>
+    
+<span class=nd>@ManagedBean</span>
+    
+<span class=nd>@SessionScoped</span>
+    
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>Student</span> <span class=o>{</span>
+    
+ <span class=nd>@Autowired</span>
+    
+ <span class=n>StudentDao</span> <span class=n>studnetDao</span><span class=o>;</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>setStudnetDao</span><span class=o>(</span><span class=n>StudentDao</span> <span class=n>studnetDao</span><span class=o>)</span> <span class=o>{</span>
+    
+ <span class=k>this</span><span class=o>.</span> <span class=n>studnetDao</span> <span class=o>=</span> <span class=n>studentDao</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+ <span class=kd>public</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=nf>fetchStudentDetails</span><span class=o>()</span> <span class=o>{</span>
+    
+ <span class=k>return</span> <span class=n>studnetDao</span><span class=o>.</span><span class=na>getStudenDetails</span><span class=o>();</span>
+    
+ <span class=o>}</span>
+<span class=o>}</span>
+    
+    
+</code></pre></td></tr></table></div></div></div><p>However, the Student bean is not accessible by the user interface of the application. Analyze the problem and provide the solution.</p><p>@JSF</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml>You should use the following code snippet to resolve the bean in the faces-config.xml file 
+      
+  <span class=nt>&lt;application&gt;</span>
+   <span class=nt>&lt;el-resolver&gt;</span> org.springframework.web.jsf.el.SpringBeanFacesELResolver <span class=nt>&lt;/el-resolver&gt;</span>
+  <span class=nt>&lt;/application&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You have written the following code snippet to declare a bean in the JSF application:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@ManagedBean</span>
+    
+<span class=nd>@RequestScoped</span>
+    
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>Auther</span> <span class=o>{</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>You have to declare the preceding bean in a Spring configuration xml file. Which of the following code snippets should you use to perform this task?</p><p>@JSF</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;author&#34;</span> <span class=na>class=</span><span class=s>&#34;Author&#34;</span> <span class=na>scope=</span><span class=s>&#34;request&#34;</span><span class=nt>&gt;&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Sharapova has integrated her JSF Web application with the Spring framework and has loaded the Spring application context file into her application. She now needs to call the Spring beans annotated with @ManagedBean from the JSF environment. Which one of the following code snippets should Sharapova use to do this?</p><p>@JSF</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;application&gt;</span>
+    
+<span class=nt>&lt;el-resolver&gt;</span> org.springframework.web.jsf.el.SpringBeanFacesELResolver<span class=nt>&lt;/el-resolver&gt;</span>
+    
+<span class=nt>&lt;/application&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You have been asked to use the Hibernate framework for managing transactions in your Spring-enabled Web application. However, before using this transaction manager, you need to declare it as a bean in the configuration file. Which one of the following code snippets will you use to declare the transaction manager?</p><p>@Hibernate</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;txMgr&#34;</span> <span class=na>class=</span><span class=s>&#34;org.springframework.orm.hibernate4.HibernateTransactionManager&#34;</span><span class=nt>&gt;</span>
+    
+<span class=nt>&lt;property</span> <span class=na>name=</span><span class=s>&#34;sessionFactory&#34;</span> <span class=na>ref=</span><span class=s>&#34;mySessionFactory&#34;</span> <span class=nt>/&gt;</span>
+    
+<span class=nt>&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Mary is creating a Web application for the book shop by using Spring MVC. She has configured the dispatcher servlet. Now, she needs to define a controller for the Web application by setting the following properties:</p><p>Name of the bean class is Book.</p><p>Name of the new form is OrderBook.</p><p>Name of the form that is displayed after successful submission of the data entered in the OrderBook page is Payment. To accomplish the preceding requirements, she uses the following code snippet in the controller class:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>GET</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>showView</span><span class=o>(</span><span class=n>ModelMap</span> <span class=n>model</span><span class=o>)</span>
+    
+<span class=o>{</span>
+    
+<span class=n>Book</span> <span class=n>b</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Book</span><span class=o>();</span>
+    
+<span class=n>model</span><span class=o>.</span><span class=na>addAttribute</span><span class=o>(</span><span class=s>&#34;Book&#34;</span><span class=o>,</span> <span class=n>b</span><span class=o>);</span>
+    
+<span class=k>return</span> <span class=s>&#34;Payment&#34;</span><span class=o>;</span>
+    
+<span class=o>}</span>
+    
+<span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>POST</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>processForm</span><span class=o>(</span><span class=nd>@ModelAttribute</span><span class=o>(</span><span class=n>value</span><span class=o>=</span><span class=s>&#34;Book&#34;</span><span class=o>)</span> <span class=n>Book</span> <span class=n>b</span><span class=o>,</span> <span class=n>ModelMap</span> <span class=n>model</span><span class=o>)</span> <span class=o>{</span>
+    
+<span class=k>return</span> <span class=s>&#34;OrderBook&#34;</span><span class=o>;</span>
+    
+<span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>However, the preceding code snippet does not fulfill the desired requirements. Analyze the problem and provide the correct code snippet.</p><p>@RequestMapping</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>//注意 get和 post 方法
+</span><span class=c1></span>    
+<span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>GET</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>showView</span><span class=o>(</span><span class=n>ModelMap</span> <span class=n>model</span><span class=o>)</span>
+    
+<span class=o>{</span>
+    
+ <span class=n>Book</span> <span class=n>b</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Book</span><span class=o>();</span>
+    
+ <span class=n>model</span><span class=o>.</span><span class=na>addAttribute</span><span class=o>(</span><span class=s>&#34;Book&#34;</span><span class=o>,</span> <span class=n>b</span><span class=o>);</span>
+    
+ <span class=k>return</span> <span class=s>&#34;OrderBook&#34;</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+<span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>POST</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>processForm</span><span class=o>(</span><span class=nd>@ModelAttribute</span><span class=o>(</span><span class=n>value</span><span class=o>=</span><span class=s>&#34;Book&#34;</span><span class=o>)</span> <span class=n>Book</span> <span class=n>b</span><span class=o>,</span> <span class=n>ModelMap</span> <span class=n>model</span> <span class=o>)</span>
+    
+<span class=o>{</span>
+    
+ <span class=k>return</span> <span class=s>&#34;Payment&#34;</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You are creating a Web application for booking hotel rooms online. You are using Spring to create this application. This application contains a Web page named BookRoom. You need to define a controller class for this Web page. When a user enters the information about the room to be booked on this page and clicks the submit button, the BookingConfirmation page is displayed on successful booking of the room. The data entered by the user on the BookRoom page is stored in a bean named Booking. Which one of the following code snippets will you use to implement the desired functionality in the controller class?</p><p>@RequestMapping</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=c1>//先GET 后 POST
+</span><span class=c1></span>    
+<span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>GET</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>showView</span><span class=o>(</span><span class=n>ModelMap</span> <span class=n>model</span><span class=o>)</span>
+    
+<span class=o>{</span>
+    
+ <span class=n>customer</span> <span class=n>p</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Customer</span><span class=o>();</span>
+    
+ <span class=n>model</span><span class=o>.</span><span class=na>addAttribute</span><span class=o>(</span><span class=s>&#34;Customer&#34;</span><span class=o>,</span> <span class=n>p</span><span class=o>);</span>
+    
+ <span class=k>return</span> <span class=s>&#34;BookRoom&#34;</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+    
+<span class=nd>@RequestMapping</span><span class=o>(</span><span class=n>method</span><span class=o>=</span><span class=n>RequestMethod</span><span class=o>.</span><span class=na>POST</span><span class=o>)</span>
+    
+<span class=kd>public</span> <span class=n>String</span> <span class=nf>processForm</span><span class=o>(</span><span class=nd>@ModelAttribute</span><span class=o>(</span><span class=n>value</span><span class=o>=</span><span class=s>&#34;Customer&#34;</span><span class=o>)</span> <span class=n>Customer</span> <span class=n>p</span><span class=o>,</span> <span class=n>ModelMap</span> <span class=n>model</span> <span class=o>)</span>
+    
+<span class=o>{</span>
+    
+ <span class=k>return</span> <span class=s>&#34;BookingConfirmation&#34;</span><span class=o>;</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>To call the Spring beans, declared in the Spring application context, the Spring framework provides the ___________________ class.</p><p>@Bean</p><pre><code>org.springframework.web.jsf.el.SpringBeanFacesELResolver
+</code></pre></li><li><p>Which of the following statements define the ORM process?</p><p>@ORM</p><pre><code>The process of mapping data representations in an object model having Java data types to a relational data model having SQL data type.
+</code></pre></li><li><p>John has created a Spring-enabled Web application, in which he has implemented transactions. While implementing transactions, he has to ensure the prevention of all the problems, such as dirty read, non-repeatable read, and phantom read. Which isolation level should he use accomplish this task?</p><p>@隔离等级</p><pre><code>ISOLATION_SERIALIZABLE
+</code></pre></li><li><p>Mary has been assigned the task to create a Web application for the book shop. She decided to create the Web application by using Spring MVC. To handle Web requests for such a Web application, she has to first configure the dispatcher servlet named BookDispatcher in the web.xml file. For this, she writes the following code:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;</span>
+    
+<span class=nt>&lt;servlet-name&gt;</span>dispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+    
+<span class=nt>&lt;servlet-class&gt;</span>org.springframework.web.servlet.BookDispatcher<span class=nt>&lt;/servlet-class&gt;</span>
+    
+<span class=nt>&lt;load-on-startup&gt;</span>1<span class=nt>&lt;/load-on-startup&gt;</span>
+    
+<span class=nt>&lt;/servlet&gt;</span>
+</code></pre></td></tr></table></div></div></div><p>However, Mary is not able to configure the dispatcher servlet by using the preceding code snippet. Analyze and provide the correct code snippet.</p><p>@dispatcher</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;</span>
+    
+<span class=nt>&lt;servlet-name&gt;</span>BookDispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+    
+<span class=nt>&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class=nt>&lt;/servlet-class&gt;</span>
+    
+<span class=nt>&lt;load-on-startup&gt;</span>1<span class=nt>&lt;/load-on-startup&gt;</span>
+    
+<span class=nt>&lt;/servlet&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You are creating a Web application for a bank by using Spring. You have implemented AOP in this application to separate the secondary logic from the primary logic. You created a class named SecondaryJob that contains the following methods to perform the secondary logic of the application: --authenticate()</p><p>- checkBalance()</p><p>- updateBalance()</p><p>The preceding methods are referred to as advices for the Web application. The authenticate() and checkBalance() methods should be executed before a joinpoint method withdraw(). The updateBalance() method should be executed after a joinpoint method withdraw(). You used the following code snippet to define the execution of the preceding methods:</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Before</span><span class=o>(</span><span class=s>&#34;withdraw()&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>Authenticate</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=o>}</span>
+    
+ <span class=nd>@Before</span><span class=o>(</span><span class=s>&#34;withdraw()&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>checkBalance</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=o>}</span>
+    
+ <span class=nd>@AfterThrowing</span><span class=o>(</span><span class=n>pointcut</span><span class=o>=</span><span class=s>&#34;withdraw()&#34;</span><span class=o>,</span> <span class=n>throwing</span><span class=o>=</span><span class=s>&#34;ex&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>updateBalance</span><span class=o>()</span> <span class=o>{</span>
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div><p>Analyze and predict if the preceding code snippet fulfills the desired requirements of the application. If not, then provide the correct code snippet.</p><p>@AOP</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>The</span> <span class=n>correct</span> <span class=n>code</span> <span class=n>snippet</span> <span class=n>is</span><span class=o>:</span>
+    
+   <span class=nd>@Before</span><span class=o>(</span><span class=s>&#34;withdraw()&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>Authenticate</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=o>}</span>
+    
+ <span class=nd>@Before</span><span class=o>(</span><span class=s>&#34;withdraw()&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>checkBalance</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=o>}</span>
+    
+ <span class=nd>@AfterReturning</span><span class=o>(</span><span class=n>pointcut</span><span class=o>=</span><span class=s>&#34;withdraw()&#34;</span><span class=o>,</span><span class=n>returning</span> <span class=o>=</span> <span class=s>&#34;result&#34;</span><span class=o>)</span>
+    
+ <span class=kd>public</span> <span class=kt>void</span> <span class=nf>updateBalance</span><span class=o>()</span> <span class=o>{</span>
+    
+    
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>The _____________ element in the web.xml file specifies the location of the applicationContext.xml file to look for declaration of beans.</p><p>@配置</p><pre><code>contextConfigLocation
+</code></pre></li><li><p>The dispatcher servlet consults one or more of its handler mappings to determine the appropriate ______________ of the request</p><p>@dispatcher</p><pre><code>Controller
+</code></pre></li><li><p>If you are using a single data source in your Spring application and accessing it using JDBC, you need to use the ______________ interface.</p><p>@JDBC</p><pre><code>DataSourceTransactionManager
+</code></pre></li><li><p>___________________ occurs when a transaction (T1) reads several rows of data, and a concurrent transaction (T2) inserts additional rows simultaneously. Upon subsequent queries, the first transaction, T1, finds the additional rows that were not there before.</p><p>@隔离等级</p><pre><code>Phantom read //幻读
+</code></pre></li><li><p>Frank is developing an ORM application using both Spring and Hibernate. He has declared the bean for DAO in a configuration file spring-hibernate.xml under configs folder. He now wants to load the passengerDetailsDAO bean to initiate the session and work with database entities. Find the correct code for this requirement.</p><p>@DAO @配置</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=n>ApplicationContext</span> <span class=n>apc</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ClassPathXmlApplicationContext</span><span class=o>(</span><span class=s>&#34;configs/spring-hibernate.xml&#34;</span><span class=o>);</span>
+     
+<span class=n>PassengerDetailsDAO</span> <span class=n>passengerDtls</span> <span class=o>=(</span><span class=n>PassengerDetailsDAO</span><span class=o>)</span> <span class=n>apc</span><span class=o>.</span><span class=na>getBean</span><span class=o>(</span><span class=s>&#34;passengerDetailsDAO&#34;</span><span class=o>);</span>
+     
+<span class=o>.........</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>The ___________ propagation behavior indicates that the current method must run within a transaction and if an existing transaction is in progress, the method will run that transaction. Otherwise a new transaction will be started.</p><p>@PROPAGATION</p><pre><code>PROPAGATION_REQUIRED
+</code></pre></li><li><p>__________ is a feature of transaction which states that all rules in a relational database must be applied to the modification in a transaction in order to maintain complete data integrity.</p><blockquote><p>__________是事务的一个特点，它规定关系数据库中的所有规则必须应用于事务中的修改，以保持完整的数据完整性</p></blockquote><p>@database</p><pre><code>Consistency //一致性 而非原子性
+</code></pre></li><li><p>Which one of the following files needs to be created first, for configuring the SessionFactory object?</p><p>@SessionFactory @Hibernate</p><pre><code>spring-hibernate.xml
+</code></pre></li><li><p>Ronald is creating a Spring-enabled Web application, which processes the admission fees paid by students for his school. In this application, he has implemented transactions and needs to ensure that when a transaction is running, then either all the data modifications being made by it should be performed or none of them should be performed. Which property of a transaction does the preceding statement refer to?</p><p>@database</p><pre><code>Atomicity //原子性
+</code></pre></li><li><p>You have been asked to configure transactions in your Web application using annotations. To do this, you have defined the @Transactional element on the methods or classes that have to be declared as transactional. Which class of the Spring framework do you need to import in your application to use the @Transactional element?</p><p>@Transactional</p><pre><code>org.springframework.transaction.annotation.Transactional
+</code></pre></li><li><p>Statement A : JSF has disadvantage of scattered code, tightly coupled and difficult to implement system services, such as transactions and security.</p><p>Statement B : When implemented in the business layer, Spring can modularize the secondary concern of a JSF Application.</p><p>@JSF</p><pre><code>Both statements are true
+</code></pre></li><li><p>What modifications do we need to make in web.xml while integrating Spring with JSF?</p><p>@JSF</p><pre><code>The mapping of applicationContext.xml should be included.
+</code></pre></li><li><p>Which one is the correct convention for naming a configuration file for dispatcher servlet?</p><p>@dispatcher</p><pre><code>dispatcher-servlet.xml
+</code></pre></li><li><p>Statement A: A transaction attribute is a description of how the transaction policies should be applied to the methods that implement transaction.</p><p>Statement B: A transaction groups an arbitrary number of simple operations, making the whole process appear as a single logical unit of work.</p><p>@transaction</p><pre><code>Both statements are true
+</code></pre></li><li><p>Statement A: PROPAGATION_SUPPORTS indicates that the current method does not necessarily require a transaction to run. If a transaction is in progress, the current method can run within it.</p><p>Statement B: PROPAGATION_NESTED indicates that the nested transaction is independent in its features from the enclosing transaction</p><p>@PROPAGATION</p><pre><code>Both statements are true
+</code></pre></li><li><p>Statement A: Dirty Read occurs when the transaction reads data from an uncommitted transaction.</p><p>Statement B: Phantom Read occurs when the subsequent queries produce additional rows which were not there before; due to a parallel running transaction.</p><p>@database</p><pre><code>Both statements are true
+</code></pre></li><li><p>Statement A: The EL resolver needs to be declared to call the Spring Beans from Spring Application Context.</p><p>Statement B: The JSF managed bean are declared in faces-config.xml while integrating with Spring.</p><p>@JSF</p><pre><code>Statement A is true, Statement B is false
+</code></pre></li><li><p>Statement A: The Hibernate application depends on its own API objects to access the database, such as Configuration, SessionFactory and Session.</p><p>Statement B: Integrating Spring with Hibernate helps to use the Hibernate objects as Spring beans.</p><pre><code>Both statements are true
+</code></pre></li><li><p>You have to integrate the Spring framework in the application developed using JSF and Hibernate. For this, you have configured the SessionFactory object in the Spring configuration file as a bean named studSessionFactory. Then, you created a DAO class named StudentDAO in the admin package. Which of the following code snippets should you use to declare to get list of student from the database?</p><p>@DAO</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Repository</span>
+     
+<span class=kd>public</span> <span class=kd>class</span> <span class=nc>StudentDao</span><span class=o>{</span>
+     
+ <span class=nd>@Autowired</span>
+     
+ <span class=kd>private</span> <span class=n>SessionFactory</span> <span class=n>sessionFactory</span><span class=o>;</span>
+     
+     
+ <span class=nd>@Transactional</span>
+     
+ <span class=kd>public</span> <span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;</span> <span class=nf>getStudent</span><span class=o>()</span> <span class=o>{</span>
+     
+ <span class=n>Session</span> <span class=n>currentSession</span><span class=o>=</span> <span class=n>sessionFactory</span><span class=o>.</span><span class=na>getCurrentSession</span><span class=o>();</span>
+     
+ <span class=n>Query</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;</span> <span class=n>query</span><span class=o>=</span> <span class=n>currentSession</span><span class=o>.</span><span class=na>createQuery</span><span class=o>(</span><span class=s>&#34;from  Student&#34;</span><span class=o>,</span><span class=n>Student</span><span class=o>.</span><span class=na>class</span> <span class=o>);</span>
+     
+ <span class=n>List</span><span class=o>&lt;</span><span class=n>Student</span><span class=o>&gt;</span> <span class=n>students</span><span class=o>=</span> <span class=n>query</span><span class=o>.</span><span class=na>getResultList</span><span class=o>();</span>
+     
+ <span class=k>return</span> <span class=n>students</span><span class=o>;</span>
+     
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You have created a Web application by using JSF. Now, you need to integrate this application with the Spring framework. Therefore, you added the Spring framework and provided mapping of the applicationContext.xml file in the web.xml file of the application. Now, you need to configure the dispatcher servlet named TicketDispatcher in the web.xml file of the application. Which of the following code snippets should you use to perform this task?</p><p>@JSF</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;servlet&gt;&lt;servlet-name&gt;</span>TicketDispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+     
+<span class=nt>&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class=nt>&lt;/servlet-class&gt;</span>
+     
+<span class=nt>&lt;load-on-startup&gt;</span>2<span class=nt>&lt;/load-on-startup&gt;</span>
+     
+<span class=nt>&lt;/servlet&gt;</span>
+     
+<span class=nt>&lt;servlet-mapping&gt;</span>
+     
+<span class=nt>&lt;servlet-name&gt;</span>TicketDispatcher<span class=nt>&lt;/servlet-name&gt;</span>
+     
+<span class=nt>&lt;url-pattern&gt;</span>\*.htm<span class=nt>&lt;/url-pattern&gt;</span>
+     
+<span class=nt>&lt;/servlet-mapping&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>While integrating Spring with Hibernate one should take care of managing the SessionFactory. What is the correct way of declaring a SessionFactory in this case?</p><p>@SessionFactory</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml>Create a new xml configuration file and declare a bean as shown below
+     
+<span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;mySessionFactory&#34;</span> <span class=na>class=</span><span class=s>&#34;org.springframework.orm.hibernate5.LocalSessionFactoryBean&#34;</span><span class=nt>&gt;</span>
+     
+<span class=nt>&lt;property</span> <span class=na>name=</span><span class=s>&#34;configLocation&#34;</span> <span class=na>value=</span><span class=s>&#34;hibernate.cfg.xm&#34;</span><span class=nt>&gt;&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Emanuel is working to configure a transaction manager for his web application. For this purpose he has used Hibernate Framework integrated to Spring MVC. Help him to identify the correct configuration code to enable transaction management.</p><p>@Hibernate @集成 @配置</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;bean</span> <span class=na>id=</span><span class=s>&#34;txManager&#34;</span> <span class=na>class=</span><span class=s>&#34;org.springframework.orm.hibernate5.HibernateTransactionManager&#34;</span><span class=nt>&gt;</span>
+     
+<span class=nt>&lt;property</span> <span class=na>name=</span><span class=s>&#34;sessionFactory&#34;</span> <span class=na>ref=</span><span class=s>&#34;mySessionFactory&#34;</span><span class=nt>&gt;</span>
+     
+<span class=nt>&lt;/bean&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Li Na has been asked to create a Web application, in which she has to integrate the Spring framework with Hibernate. To do this, Li Na has to configure the SessionFactory object in the Spring configuration file. For this, she has created a Spring configuration file named Spring-Hibernate.xml. Which of the following code snippets should she use to configure the SessionFactory object?</p><p>@集成 @Hibernate</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Bean</span>
+     
+ <span class=kd>public</span> <span class=n>LocalSessionFactoryBean</span> <span class=nf>sessionFactory</span><span class=o>(){</span>
+     
+ <span class=c1>// create session factorys
+</span><span class=c1></span>     
+ <span class=n>LocalSessionFactoryBean</span> <span class=n>sessionFactory</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LocalSessionFactoryBean</span><span class=o>();</span>
+     
+ <span class=c1>// set the properties
+</span><span class=c1></span>     
+ <span class=n>sessionFactory</span><span class=o>.</span><span class=na>setDataSource</span><span class=o>(</span><span class=n>myDataSource</span><span class=o>());</span>
+     
+ <span class=n>sessionFactory</span><span class=o>.</span><span class=na>setPackagesToScan</span><span class=o>(</span><span class=n>env</span><span class=o>.</span><span class=na>getProperty</span><span class=o>(</span><span class=s>&#34;hibernate.packagesToScan&#34;</span><span class=o>));</span>
+     
+ <span class=n>sessionFactory</span><span class=o>.</span><span class=na>setHibernateProperties</span><span class=o>(</span><span class=n>getHibernateProperties</span><span class=o>());</span>
+     
+ <span class=k>return</span> <span class=n>sessionFactory</span><span class=o>;</span>
+     
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Roddick has created a Spring-enabled Web application, which he has integrated with Hibernate for providing data persistence. He now wants to implement transactions in his application. For this, Roddick has to create a data source bean in the configuration file to enable the application connect with the database. The application needs to connect with the derby database named TechDB having user name as tech and password as &lt;a href="mailto:pass@123">pass@123&lt;/a>. Which one of the following code snippets should he use to create a data source bean?</p><p>@DataSource @Database</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java> <span class=nd>@Bean</span>
+     
+ <span class=kd>public</span> <span class=n>DataSource</span> <span class=nf>myDataSource</span><span class=o>()</span> <span class=o>{</span>
+     
+ <span class=k>try</span> <span class=o>{</span>
+     
+  <span class=n>myDataSource</span><span class=o>.</span><span class=na>setDriverClass</span><span class=o>(</span><span class=s>&#34;org.apache.derby.jdbc.ClientDriver&#34;</span><span class=o>);</span> 
+     
+ <span class=o>}</span>
+     
+ <span class=k>catch</span> <span class=o>(</span><span class=n>Exception</span> <span class=n>exc</span><span class=o>)</span> <span class=o>{</span>
+     
+  <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>exc</span><span class=o>);</span>
+     
+ <span class=o>}</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setJdbcUrl</span><span class=o>(</span><span class=s>&#34;jdbc:derby://localhost:1527/TechDB&#34;</span><span class=o>);</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setUser</span><span class=o>(</span><span class=s>&#34;tech&#34;</span><span class=o>);</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setPassword</span><span class=o>(</span><span class=s>&#34;&lt;a href=\&#34;mailto:pass@123\&#34;&gt;pass@123&lt;/a&gt;&#34;</span> <span class=o>);</span>
+     
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>You have created a Web application by using JSF and Hibernate. Now, you need to integrate this application with the Spring framework. For this, you first need to define a transaction manager for Hibernate. Which of the following code snippets will you use to define a transaction manager?</p><p>@Hibernate</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Autowired</span> 
+     
+<span class=nd>@Bean</span>
+     
+<span class=kd>public</span> <span class=n>HibernateTransactionManager</span> <span class=nf>transactionManager</span><span class=o>(</span><span class=n>SessionFactory</span> <span class=n>sessionFactory</span><span class=o>)</span> <span class=o>{</span>
+      
+<span class=n>HibernateTransactionManager</span> <span class=n>txManager</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HibernateTransactionManager</span><span class=o>();</span>
+     
+ <span class=n>txManager</span><span class=o>.</span><span class=na>setSessionFactory</span><span class=o>(</span><span class=n>sessionFactory</span><span class=o>);</span>
+      
+ <span class=k>return</span> <span class=n>txManager</span><span class=o>;</span>
+     
+ <span class=o>}</span> 
+</code></pre></td></tr></table></div></div></div></li><li><p>ndrea has developed a JSF application which is based on Managed Bean empDateBean for Employee Class. The empData.jsp is to accept either of empID or the department, so as to display the list of employees on to empList.jsp. Below is the code from faces-config.xml :</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=err>&lt;</span>?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;&gt;
+     
+<span class=cp>&lt;!DOCTYPE faces-config PUBLIC &gt;</span>
+     
+     
+<span class=nt>&lt;faces-config&gt;</span>
+     
+<span class=nt>&lt;navigation-rule&gt;</span>
+     
+<span class=nt>&lt;from-view-id&gt;</span>/empData.jsp<span class=nt>&lt;/from-view-id&gt;</span> 
+     
+<span class=nt>&lt;navigation-case&gt;</span> 
+     
+<span class=nt>&lt;from-outcome&gt;</span>showEmpList<span class=nt>&lt;/from-outcome&gt;</span> 
+     
+<span class=nt>&lt;to-view-id&gt;</span>/WEB-INF/results/empList.jsp&gt;<span class=nt>&lt;/to-view-id&gt;</span>
+     
+<span class=nt>&lt;/navigation-case&gt;</span>
+     
+<span class=nt>&lt;/navigation-rule&gt;</span>
+     
+<span class=nt>&lt;/faces-config&gt;</span>
+     
+      
+</code></pre></td></tr></table></div></div></div><p>When he deploys the application; the application throws a NullPointerException. What could be the correct reason?</p><p>@NullPointerException</p><pre><code>The faces-config.xml is missing &lt;managed-bean&gt; declaration
+</code></pre></li><li><p>Sandra is facing the problem of missing reference to applicationContext.xml; though she has added the file at /WEB-INF/Configs/applicationContext.xml . Find the correct code resolve the issue.</p><p>@配置</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-xml data-lang=xml><span class=nt>&lt;init-param&gt;</span>
+     
+  <span class=nt>&lt;param-name&gt;</span>contextConfigLocation<span class=nt>&lt;/param-name&gt;</span>
+     
+  <span class=nt>&lt;param-value&gt;</span>/WEB-INF/Configs/applicationContext.xml<span class=nt>&lt;/param-value&gt;</span>
+     
+  <span class=nt>&lt;/init-param&gt;</span>
+</code></pre></td></tr></table></div></div></div></li><li><p>Samuel has to configure datasource for transaction management with EmployeeDB database. For the same he has added hibernate with Java Derby Database to the spring web application. Help Samuel to configure the datasource.</p><p>@Hibernate @Database</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-java data-lang=java><span class=nd>@Bean</span>
+     
+ <span class=kd>public</span> <span class=n>DataSource</span> <span class=nf>myDataSource</span><span class=o>()</span> <span class=o>{</span>
+     
+ <span class=k>try</span> <span class=o>{</span>
+     
+  <span class=n>myDataSource</span><span class=o>.</span><span class=na>setDriverClass</span><span class=o>(</span><span class=s>&#34;org.apache.derby.jdbc.ClientDriver&#34;</span><span class=o>);</span> 
+     
+ <span class=o>}</span>
+     
+ <span class=k>catch</span> <span class=o>(</span><span class=n>Exception</span> <span class=n>exc</span><span class=o>)</span> <span class=o>{</span>
+     
+  <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>exc</span><span class=o>);</span>
+     
+ <span class=o>}</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setJdbcUrl</span><span class=o>(</span><span class=s>&#34;jdbc:derby://localhost:1527/EmployeeDB&#34;</span><span class=o>);</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setUser</span><span class=o>(</span><span class=s>&#34;admin&#34;</span><span class=o>);</span>
+     
+ <span class=n>myDataSource</span><span class=o>.</span><span class=na>setPassword</span><span class=o>(</span><span class=s>&#34;&lt;a href=\&#34;mailto:pass@123\&#34;&gt;pass@123&lt;/a&gt;&#34;</span> <span class=o>);</span>
+     
+ <span class=o>}</span>
+</code></pre></td></tr></table></div></div></div></li></ol></div></article><div class=post-share><div class=share-items><div class="share-item twitter"><a href="https://twitter.com/share?url=https://borber.cn/tech/srping_renew/&text=Spring%20%e5%a4%8d%e4%b9%a0&hashtags=Spring,Java,&via=BORBER_X" title=分享到「Twitter」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></div><div class="share-item facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://borber.cn/tech/srping_renew/&hashtag=%23Spring" title=分享到「Facebook」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></div><div class="share-item linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://borber.cn/tech/srping_renew/&title=Spring%20%e5%a4%8d%e4%b9%a0&summary=%e5%a4%8d%e4%b9%a0%e8%b5%84%e6%96%99...%20%e5%8d%9a%e5%ae%a2%e5%9b%ad%e6%98%af%e5%8a%a0%e5%af%86%e7%9a%84%20%e4%b8%8d%e8%bf%87%e8%bf%99%e8%be%b9%e5%b0%b1%e7%ae%97%e4%ba%86%e5%90%a7&source=BORBER" title=分享到「LinkedIn」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg></a></div><div class="share-item telegram"><a href="https://t.me/share/url?url=https://borber.cn/tech/srping_renew/&text=Spring%20%e5%a4%8d%e4%b9%a0" title=分享到「Telegram」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a></div><div class="share-item weibo"><a href="https://service.weibo.com/share/share.php?&url=https://borber.cn/tech/srping_renew/&title=Spring%20%e5%a4%8d%e4%b9%a0&pic=https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png&searchPic=false" title=分享到「新浪微博」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7.0 395.3.0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a></div><div class="share-item douban"><a href="https://www.douban.com/share/service?href=https://borber.cn/tech/srping_renew/&name=Spring%20%e5%a4%8d%e4%b9%a0&text=%e5%a4%8d%e4%b9%a0%e8%b5%84%e6%96%99...%20%e5%8d%9a%e5%ae%a2%e5%9b%ad%e6%98%af%e5%8a%a0%e5%af%86%e7%9a%84%20%e4%b8%8d%e8%bf%87%e8%bf%99%e8%be%b9%e5%b0%b1%e7%ae%97%e4%ba%86%e5%90%a7" title=分享到「豆瓣」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952.0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03z"/></svg></a></div><div class="share-item qq"><a href="https://connect.qq.com/widget/shareqq/index.html?url=https://borber.cn/tech/srping_renew/&title=Spring%20%e5%a4%8d%e4%b9%a0&summary=%e5%a4%8d%e4%b9%a0%e8%b5%84%e6%96%99...%20%e5%8d%9a%e5%ae%a2%e5%9b%ad%e6%98%af%e5%8a%a0%e5%af%86%e7%9a%84%20%e4%b8%8d%e8%bf%87%e8%bf%99%e8%be%b9%e5%b0%b1%e7%ae%97%e4%ba%86%e5%90%a7&pics=https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png&site=BORBER" title=分享到「QQ」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741.0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792.0.0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a></div><div class="share-item qzone"><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://borber.cn/tech/srping_renew/&title=Spring%20%e5%a4%8d%e4%b9%a0&summary=%e5%a4%8d%e4%b9%a0%e8%b5%84%e6%96%99...%20%e5%8d%9a%e5%ae%a2%e5%9b%ad%e6%98%af%e5%8a%a0%e5%af%86%e7%9a%84%20%e4%b8%8d%e8%bf%87%e8%bf%99%e8%be%b9%e5%b0%b1%e7%ae%97%e4%ba%86%e5%90%a7&pics=https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png&site=BORBER" title="分享到「QQ 空间」" target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532s-.251.051-.349.238c-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477.0 00.125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061.201.061.201.061 6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463.0 00.159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5.0 012.861-2.155c1.285-.968 3.559-2.47 3.559-2.731.0-.285-2.144-.781-4.037-.781-1.945.0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276.0.342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688.0.342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477.0 00.127-.449z"/></svg></a></div><div class="share-item qrcode"><div class=qrcode-container title=通过「二维码」><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id=qrcode-img></div></div><script src=https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js></script><script>var typeNumber=0;var errorCorrectionLevel='L';var qr=qrcode(typeNumber,errorCorrectionLevel);qr.addData('https:\/\/borber.cn\/tech\/srping_renew\/');qr.make();document.getElementById('qrcode-img').innerHTML=qr.createImgTag();</script></div></div></div><footer class=minimal-footer><div class=post-tag><a href=../../tags/spring/ rel=tag class=post-tag-link>#spring</a> <a href=../../tags/java/ rel=tag class=post-tag-link>#java</a></div><div class=post-category><a href=../../tech/ class="post-category-link active">tech</a> | <a href=../../life/ class=post-category-link>life</a></div></footer><ul class=post-nav><li class=post-nav-prev><a href=../../tech/wolai/ rel=prev>&lt; WoLai ——Notion的优秀模仿者</a></li><li class=post-nav-next><a href=../../tech/maven_ssm/ rel=next>国内源 maven 配置 + SSM 脚手架 整合 ></a></li></ul><div class=load-comments><div id=load-comments>加载评论</div></div><div id=vcomments></div></div></main><div id=back-to-top class=back-to-top><a href=#><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6.0-33.9L207 39c9.4-9.4 24.6-9.4 33.9.0l194.3 194.3c9.4 9.4 9.4 24.6.0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3.0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a></div><footer id=footer class=footer><div class=footer-inner><div class=site-info>©&nbsp;2020–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3.0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;BORBER</div><div class=custom-footer><br></div><ul class=socials><li class=socials-item><a href=../../rss.xml target=_blank rel="external noopener" title=RSS><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8.0 4.8V0c13.165.0 24 10.835 24 24h-4.801zM3.291 17.415c1.814.0 3.293 1.479 3.293 3.295.0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526.0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727.0 15.909 7.184 15.909 15.91z"/></svg></a></li><li class=socials-item><a href=mailto:borber.drum@gmail.com target=_blank rel="external noopener" title=Email><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49.0 112v288c0 26.51 21.49 48 48 48h416c26.51.0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 4e2V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V4e2H48z"/></svg></a></li><li class=socials-item><a href=https://github.com/borber target=_blank rel="external noopener" title=GitHub><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63.0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577.0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93.0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176.0.0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22.0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22.0 1.606-.015 2.896-.015 3.286.0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li><li class=socials-item><a href=https://twitter.com/BORBER_X target=_blank rel="external noopener" title=Twitter><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li><li class=socials-item><a href=https://t.me/borber target=_blank rel="external noopener" title=Telegram><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a></li></ul></div></footer></div><script src=https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js></script><script>var scroll=new SmoothScroll('a[href*="#"]',{speedAsDuration:true,header:'[data-scroll-header]'});</script><script>function loadComments(){if(typeof Valine==='undefined'){var getScript=(options)=>{var script=document.createElement('script');script.defer=true;script.crossOrigin='anonymous';Object.keys(options).forEach((key)=>{script[key]=options[key];});document.body.appendChild(script);};getScript({src:'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',onload:()=>{newValine();}});}else{newValine();}}
+function newValine(){new Valine({el:'#vcomments',appId:'PIuRARKT509XPdOdxA757zbX-MdYXbMMI',appKey:'MrsbvltXknb5SbiBO7tBDgln',placeholder:'Just go go',path:location.pathname,avatar:'mm',meta:["nick","mail","link"],pageSize:10,lang:'zh-cn',visitor:true,highlight:true,avatarForce:true,recordIP:true,serverURLs:'',emojiCDN:'https:\/\/cdn.jsdelivr.net\/gh\/GamerNoTitle\/ValineCDN@master\/',emojiMaps:{"alu10":"alu/内伤.png","alu11":"alu/击掌.png","alu12":"alu/口水.png","alu13":"alu/吐.png","alu14":"alu/吐舌.png","alu15":"alu/吐血倒地.png","alu16":"alu/呲牙.png","alu17":"alu/咽气.png","alu18":"alu/哭泣.png","alu19":"alu/喜极而泣.png","alu2":"alu/不出所料.png","alu20":"alu/喷水.png","alu21":"alu/喷血.png","alu22":"alu/坐等.png","alu23":"alu/害羞.png","alu24":"alu/小眼睛.png","alu25":"alu/尴尬.png","alu26":"alu/得意.png","alu27":"alu/惊喜.png","alu28":"alu/想一想.png","alu29":"alu/愤怒.png","alu3":"alu/不说话.png","alu30":"alu/扇耳光.png","alu31":"alu/投降.png","alu32":"alu/抠鼻.png","alu33":"alu/抽烟.png","alu34":"alu/无奈.png","alu35":"alu/无所谓.png","alu36":"alu/无语.png","alu37":"alu/暗地观察.png","alu38":"alu/期待.png","alu39":"alu/欢呼.png","alu4":"alu/不高兴.png","alu40":"alu/汗.png","alu41":"alu/深思.png","alu42":"alu/狂汗.png","alu43":"alu/献花.png","alu44":"alu/献黄瓜.png","alu45":"alu/皱眉.png","alu46":"alu/看不见.png","alu47":"alu/看热闹.png","alu48":"alu/瞅你.png","alu49":"alu/肿包.png","alu5":"alu/中刀.png","alu50":"alu/脸红.png","alu51":"alu/蜡烛.png","alu52":"alu/装大款.png","alu53":"alu/观察.png","alu54":"alu/赞一个.png","alu55":"alu/邪恶.png","alu56":"alu/锁眉.png","alu57":"alu/长草.png","alu58":"alu/阴暗.png","alu59":"alu/高兴.png","alu6":"alu/中指.png","alu60":"alu/黑线.png","alu61":"alu/鼓掌.png","alu7":"alu/中枪.png","alu8":"alu/亲亲.png","alu9":"alu/便便.png","bilibili223310":"bilibili2233/[2233娘_怒].png","bilibili223311":"bilibili2233/[2233娘_无言].png","bilibili223312":"bilibili2233/[2233娘_汗].png","bilibili223313":"bilibili2233/[2233娘_疑问].png","bilibili223314":"bilibili2233/[2233娘_第一].png","bilibili223315":"bilibili2233/[2233娘_耶].png","bilibili223316":"bilibili2233/[2233娘_郁闷].png","bilibili22332":"bilibili2233/[2233娘_卖萌].png","bilibili22333":"bilibili2233/[2233娘_吃惊].png","bilibili22334":"bilibili2233/[2233娘_吐魂].png","bilibili22335":"bilibili2233/[2233娘_喝水].png","bilibili22336":"bilibili2233/[2233娘_困惑].png","bilibili22337":"bilibili2233/[2233娘_大哭].png","bilibili22338":"bilibili2233/[2233娘_大笑].png","bilibili22339":"bilibili2233/[2233娘_委屈].png","bilibilihotkey1":"bilibiliHotKey/1.jpg","bilibilihotkey10":"bilibiliHotKey/18.jpg","bilibilihotkey11":"bilibiliHotKey/19.jpg","bilibilihotkey12":"bilibiliHotKey/2.jpg","bilibilihotkey13":"bilibiliHotKey/20.jpg","bilibilihotkey14":"bilibiliHotKey/21.jpg","bilibilihotkey15":"bilibiliHotKey/22.jpg","bilibilihotkey16":"bilibiliHotKey/23.jpg","bilibilihotkey17":"bilibiliHotKey/24.jpg","bilibilihotkey18":"bilibiliHotKey/25.jpg","bilibilihotkey19":"bilibiliHotKey/26.jpg","bilibilihotkey2":"bilibiliHotKey/10.jpg","bilibilihotkey20":"bilibiliHotKey/27.jpg","bilibilihotkey21":"bilibiliHotKey/28.jpg","bilibilihotkey22":"bilibiliHotKey/29.jpg","bilibilihotkey23":"bilibiliHotKey/3.jpg","bilibilihotkey24":"bilibiliHotKey/30.jpg","bilibilihotkey25":"bilibiliHotKey/31.jpg","bilibilihotkey26":"bilibiliHotKey/32.jpg","bilibilihotkey27":"bilibiliHotKey/4.jpg","bilibilihotkey28":"bilibiliHotKey/5.jpg","bilibilihotkey29":"bilibiliHotKey/6.jpg","bilibilihotkey3":"bilibiliHotKey/11.jpg","bilibilihotkey30":"bilibiliHotKey/7.jpg","bilibilihotkey31":"bilibiliHotKey/8.jpg","bilibilihotkey32":"bilibiliHotKey/9.jpg","bilibilihotkey4":"bilibiliHotKey/12.jpg","bilibilihotkey5":"bilibiliHotKey/13.jpg","bilibilihotkey6":"bilibiliHotKey/14.jpg","bilibilihotkey7":"bilibiliHotKey/15.jpg","bilibilihotkey8":"bilibiliHotKey/16.jpg","bilibilihotkey9":"bilibiliHotKey/17.jpg","coolapk10":"Coolapk/coolapk_emotion_1017.png","coolapk100":"Coolapk/coolapk_emotion_7_hehe.png","coolapk101":"Coolapk/coolapk_emotion_80.png","coolapk102":"Coolapk/coolapk_emotion_81_naikezui.png","coolapk103":"Coolapk/coolapk_emotion_82_miaomiao.png","coolapk104":"Coolapk/coolapk_emotion_83_huoba.png","coolapk105":"Coolapk/coolapk_emotion_84_baiyan.png","coolapk106":"Coolapk/coolapk_emotion_85.png","coolapk107":"Coolapk/coolapk_emotion_86.png","coolapk108":"Coolapk/coolapk_emotion_87.png","coolapk109":"Coolapk/coolapk_emotion_88.png","coolapk11":"Coolapk/coolapk_emotion_1018.png","coolapk110":"Coolapk/coolapk_emotion_89.png","coolapk111":"Coolapk/coolapk_emotion_8_piezui.png","coolapk112":"Coolapk/coolapk_emotion_90.png","coolapk113":"Coolapk/coolapk_emotion_91.png","coolapk114":"Coolapk/coolapk_emotion_92.png","coolapk115":"Coolapk/coolapk_emotion_93.png","coolapk116":"Coolapk/coolapk_emotion_94.png","coolapk117":"Coolapk/coolapk_emotion_95_erhading.png","coolapk118":"Coolapk/coolapk_emotion_96_kuanlvmao.png","coolapk119":"Coolapk/coolapk_emotion_97_haixiu.png","coolapk12":"Coolapk/coolapk_emotion_1019.png","coolapk120":"Coolapk/coolapk_emotion_98_wunai.png","coolapk121":"Coolapk/coolapk_emotion_99_zhoumei.png","coolapk122":"Coolapk/coolapk_emotion_9_se.png","coolapk123":"Coolapk/c_coolb.png","coolapk124":"Coolapk/c_fived.png","coolapk125":"Coolapk/c_fivef.png","coolapk126":"Coolapk/c_fivem.png","coolapk127":"Coolapk/c_fiveo.png","coolapk128":"Coolapk/c_fivey.png","coolapk129":"Coolapk/c_fy.png","coolapk13":"Coolapk/coolapk_emotion_101_pyjiaoyi.png","coolapk130":"Coolapk/c_oned.png","coolapk131":"Coolapk/c_onef.png","coolapk132":"Coolapk/c_onem.png","coolapk133":"Coolapk/c_oneo.png","coolapk134":"Coolapk/c_oney.png","coolapk135":"Coolapk/c_oy.png","coolapk136":"Coolapk/c_teny.png","coolapk137":"Coolapk/c_twod.png","coolapk138":"Coolapk/c_twof.png","coolapk139":"Coolapk/c_twom.png","coolapk14":"Coolapk/coolapk_emotion_1020.png","coolapk140":"Coolapk/c_twoo.png","coolapk141":"Coolapk/c_twoy.png","coolapk142":"Coolapk/c_ty.png","coolapk15":"Coolapk/coolapk_emotion_1021.png","coolapk16":"Coolapk/coolapk_emotion_102_fadai.png","coolapk17":"Coolapk/coolapk_emotion_103_nb.png","coolapk18":"Coolapk/coolapk_emotion_104.png","coolapk19":"Coolapk/coolapk_emotion_105.png","coolapk2":"Coolapk/coolapk_emotion_100_qqdoge.png","coolapk20":"Coolapk/coolapk_emotion_106.png","coolapk21":"Coolapk/coolapk_emotion_107.png","coolapk22":"Coolapk/coolapk_emotion_108.png","coolapk23":"Coolapk/coolapk_emotion_109.png","coolapk24":"Coolapk/coolapk_emotion_10_aoman.png","coolapk25":"Coolapk/coolapk_emotion_11_yiwen.png","coolapk26":"Coolapk/coolapk_emotion_12_wuyu.png","coolapk27":"Coolapk/coolapk_emotion_13_huaixiao.png","coolapk28":"Coolapk/coolapk_emotion_14_bishi.png","coolapk29":"Coolapk/coolapk_emotion_15_fanu.png","coolapk3":"Coolapk/coolapk_emotion_1010.png","coolapk30":"Coolapk/coolapk_emotion_16_tuosai.png","coolapk31":"Coolapk/coolapk_emotion_17_tushe.png","coolapk32":"Coolapk/coolapk_emotion_18_han.png","coolapk33":"Coolapk/coolapk_emotion_19_koubi.png","coolapk34":"Coolapk/coolapk_emotion_1_hahaha.png","coolapk35":"Coolapk/coolapk_emotion_20_qinqin.png","coolapk36":"Coolapk/coolapk_emotion_21_penxue.png","coolapk37":"Coolapk/coolapk_emotion_22_xiaoyan.png","coolapk38":"Coolapk/coolapk_emotion_23_shui.png","coolapk39":"Coolapk/coolapk_emotion_24_wuzuixiao.png","coolapk4":"Coolapk/coolapk_emotion_1011.png","coolapk40":"Coolapk/coolapk_emotion_25_zaijian.png","coolapk41":"Coolapk/coolapk_emotion_26_kelian.png","coolapk42":"Coolapk/coolapk_emotion_27_qiang.png","coolapk43":"Coolapk/coolapk_emotion_28_ruo.png","coolapk44":"Coolapk/coolapk_emotion_29_baoquan.png","coolapk45":"Coolapk/coolapk_emotion_2_jingya.png","coolapk46":"Coolapk/coolapk_emotion_30_ok.png","coolapk47":"Coolapk/coolapk_emotion_31_xiaoku.png","coolapk48":"Coolapk/coolapk_emotion_32_heiha.png","coolapk49":"Coolapk/coolapk_emotion_33_wulian.png","coolapk5":"Coolapk/coolapk_emotion_1012.png","coolapk50":"Coolapk/coolapk_emotion_34_jizhi.png","coolapk51":"Coolapk/coolapk_emotion_35_ye.png","coolapk52":"Coolapk/coolapk_emotion_36_ku.png","coolapk53":"Coolapk/coolapk_emotion_37_doge.png","coolapk54":"Coolapk/coolapk_emotion_38_wozuimei.png","coolapk55":"Coolapk/coolapk_emotion_39_caidao.png","coolapk56":"Coolapk/coolapk_emotion_3_ciya.png","coolapk57":"Coolapk/coolapk_emotion_40_aixin.png","coolapk58":"Coolapk/coolapk_emotion_41_meigui.png","coolapk59":"Coolapk/coolapk_emotion_42_diaoxie.png","coolapk6":"Coolapk/coolapk_emotion_1013.png","coolapk60":"Coolapk/coolapk_emotion_43_heixian.png","coolapk61":"Coolapk/coolapk_emotion_44_pen.png","coolapk62":"Coolapk/coolapk_emotion_45_yinxian.png","coolapk63":"Coolapk/coolapk_emotion_46_nanguo.png","coolapk64":"Coolapk/coolapk_emotion_47_weiqu.png","coolapk65":"Coolapk/coolapk_emotion_48_weiweiyixiao.png","coolapk66":"Coolapk/coolapk_emotion_49_huanhu.png","coolapk67":"Coolapk/coolapk_emotion_4_liulei.png","coolapk68":"Coolapk/coolapk_emotion_50_xinsui.png","coolapk69":"Coolapk/coolapk_emotion_51_chigua.png","coolapk7":"Coolapk/coolapk_emotion_1014.png","coolapk70":"Coolapk/coolapk_emotion_52_hejiu.png","coolapk71":"Coolapk/coolapk_emotion_53_pu.png","coolapk72":"Coolapk/coolapk_emotion_54_hongyaowan.png","coolapk73":"Coolapk/coolapk_emotion_55_lvyaowan.png","coolapk74":"Coolapk/coolapk_emotion_56_dogexiaoku.png","coolapk75":"Coolapk/coolapk_emotion_57_dogehechi.png","coolapk76":"Coolapk/coolapk_emotion_58_dogeyuanliangta.png","coolapk77":"Coolapk/coolapk_emotion_59_erha.png","coolapk78":"Coolapk/coolapk_emotion_5_keai.png","coolapk79":"Coolapk/coolapk_emotion_60_kuan.png","coolapk8":"Coolapk/coolapk_emotion_1015.png","coolapk80":"Coolapk/coolapk_emotion_61_lvmao.png","coolapk81":"Coolapk/coolapk_emotion_62_huaji.png","coolapk82":"Coolapk/coolapk_emotion_63_liuhanhuaji.png","coolapk83":"Coolapk/coolapk_emotion_64_shounuehuaji.png","coolapk84":"Coolapk/coolapk_emotion_65_coshuaji.png","coolapk85":"Coolapk/coolapk_emotion_66_doujiyanhuaji.png","coolapk86":"Coolapk/coolapk_emotion_67_mojinghuaji.png","coolapk87":"Coolapk/coolapk_emotion_68.png","coolapk88":"Coolapk/coolapk_emotion_69.png","coolapk89":"Coolapk/coolapk_emotion_6_weixiao.png","coolapk9":"Coolapk/coolapk_emotion_1016.png","coolapk90":"Coolapk/coolapk_emotion_70.png","coolapk91":"Coolapk/coolapk_emotion_71.png","coolapk92":"Coolapk/coolapk_emotion_72.png","coolapk93":"Coolapk/coolapk_emotion_73.png","coolapk94":"Coolapk/coolapk_emotion_74.png","coolapk95":"Coolapk/coolapk_emotion_75.png","coolapk96":"Coolapk/coolapk_emotion_76.png","coolapk97":"Coolapk/coolapk_emotion_77.png","coolapk98":"Coolapk/coolapk_emotion_78.png","coolapk99":"Coolapk/coolapk_emotion_79.png","menhera-chan1":"Menhera-chan/1.jpg","menhera-chan10":"Menhera-chan/107.jpg","menhera-chan100":"Menhera-chan/8.jpg","menhera-chan101":"Menhera-chan/80.jpg","menhera-chan102":"Menhera-chan/81.jpg","menhera-chan103":"Menhera-chan/82.jpg","menhera-chan104":"Menhera-chan/83.jpg","menhera-chan105":"Menhera-chan/84.jpg","menhera-chan106":"Menhera-chan/85.jpg","menhera-chan107":"Menhera-chan/86.jpg","menhera-chan108":"Menhera-chan/87.jpg","menhera-chan109":"Menhera-chan/88.jpg","menhera-chan11":"Menhera-chan/108.jpg","menhera-chan110":"Menhera-chan/89.jpg","menhera-chan111":"Menhera-chan/9.jpg","menhera-chan112":"Menhera-chan/90.jpg","menhera-chan113":"Menhera-chan/91.jpg","menhera-chan114":"Menhera-chan/92.jpg","menhera-chan115":"Menhera-chan/93.jpg","menhera-chan116":"Menhera-chan/94.jpg","menhera-chan117":"Menhera-chan/95.jpg","menhera-chan118":"Menhera-chan/96.jpg","menhera-chan119":"Menhera-chan/97.jpg","menhera-chan12":"Menhera-chan/109.jpg","menhera-chan120":"Menhera-chan/98.jpg","menhera-chan121":"Menhera-chan/99.jpg","menhera-chan13":"Menhera-chan/11.jpg","menhera-chan14":"Menhera-chan/110.jpg","menhera-chan15":"Menhera-chan/111.jpg","menhera-chan16":"Menhera-chan/112.jpg","menhera-chan17":"Menhera-chan/113.jpg","menhera-chan18":"Menhera-chan/114.jpg","menhera-chan19":"Menhera-chan/115.jpg","menhera-chan2":"Menhera-chan/10.jpg","menhera-chan20":"Menhera-chan/116.jpg","menhera-chan21":"Menhera-chan/117.jpg","menhera-chan22":"Menhera-chan/118.jpg","menhera-chan23":"Menhera-chan/119.jpg","menhera-chan24":"Menhera-chan/12.jpg","menhera-chan25":"Menhera-chan/120.jpg","menhera-chan26":"Menhera-chan/13.jpg","menhera-chan27":"Menhera-chan/14.jpg","menhera-chan28":"Menhera-chan/15.jpg","menhera-chan29":"Menhera-chan/16.jpg","menhera-chan3":"Menhera-chan/100.jpg","menhera-chan30":"Menhera-chan/17.jpg","menhera-chan31":"Menhera-chan/18.jpg","menhera-chan32":"Menhera-chan/19.jpg","menhera-chan33":"Menhera-chan/2.jpg","menhera-chan34":"Menhera-chan/20.jpg","menhera-chan35":"Menhera-chan/21.jpg","menhera-chan36":"Menhera-chan/22.jpg","menhera-chan37":"Menhera-chan/23.jpg","menhera-chan38":"Menhera-chan/24.jpg","menhera-chan39":"Menhera-chan/25.jpg","menhera-chan4":"Menhera-chan/101.jpg","menhera-chan40":"Menhera-chan/26.jpg","menhera-chan41":"Menhera-chan/27.jpg","menhera-chan42":"Menhera-chan/28.jpg","menhera-chan43":"Menhera-chan/29.jpg","menhera-chan44":"Menhera-chan/3.jpg","menhera-chan45":"Menhera-chan/30.jpg","menhera-chan46":"Menhera-chan/31.jpg","menhera-chan47":"Menhera-chan/32.jpg","menhera-chan48":"Menhera-chan/33.jpg","menhera-chan49":"Menhera-chan/34.jpg","menhera-chan5":"Menhera-chan/102.jpg","menhera-chan50":"Menhera-chan/35.jpg","menhera-chan51":"Menhera-chan/36.jpg","menhera-chan52":"Menhera-chan/37.jpg","menhera-chan53":"Menhera-chan/38.jpg","menhera-chan54":"Menhera-chan/39.jpg","menhera-chan55":"Menhera-chan/4.jpg","menhera-chan56":"Menhera-chan/40.jpg","menhera-chan57":"Menhera-chan/41.jpg","menhera-chan58":"Menhera-chan/42.jpg","menhera-chan59":"Menhera-chan/43.jpg","menhera-chan6":"Menhera-chan/103.jpg","menhera-chan60":"Menhera-chan/44.jpg","menhera-chan61":"Menhera-chan/45.jpg","menhera-chan62":"Menhera-chan/46.jpg","menhera-chan63":"Menhera-chan/47.jpg","menhera-chan64":"Menhera-chan/48.jpg","menhera-chan65":"Menhera-chan/49.jpg","menhera-chan66":"Menhera-chan/5.jpg","menhera-chan67":"Menhera-chan/50.jpg","menhera-chan68":"Menhera-chan/51.jpg","menhera-chan69":"Menhera-chan/52.jpg","menhera-chan7":"Menhera-chan/104.jpg","menhera-chan70":"Menhera-chan/53(1).jpg","menhera-chan71":"Menhera-chan/53.jpg","menhera-chan72":"Menhera-chan/54.jpg","menhera-chan73":"Menhera-chan/55.jpg","menhera-chan74":"Menhera-chan/56.jpg","menhera-chan75":"Menhera-chan/57.jpg","menhera-chan76":"Menhera-chan/58.jpg","menhera-chan77":"Menhera-chan/59.jpg","menhera-chan78":"Menhera-chan/6.jpg","menhera-chan79":"Menhera-chan/60.jpg","menhera-chan8":"Menhera-chan/105.jpg","menhera-chan80":"Menhera-chan/61.jpg","menhera-chan81":"Menhera-chan/62.jpg","menhera-chan82":"Menhera-chan/63.jpg","menhera-chan83":"Menhera-chan/64.jpg","menhera-chan84":"Menhera-chan/65.jpg","menhera-chan85":"Menhera-chan/66.jpg","menhera-chan86":"Menhera-chan/67.jpg","menhera-chan87":"Menhera-chan/68.jpg","menhera-chan88":"Menhera-chan/69.jpg","menhera-chan89":"Menhera-chan/7.jpg","menhera-chan9":"Menhera-chan/106.jpg","menhera-chan90":"Menhera-chan/70.jpg","menhera-chan91":"Menhera-chan/71.jpg","menhera-chan92":"Menhera-chan/72.jpg","menhera-chan93":"Menhera-chan/73.jpg","menhera-chan94":"Menhera-chan/74.jpg","menhera-chan95":"Menhera-chan/75.jpg","menhera-chan96":"Menhera-chan/76.jpg","menhera-chan97":"Menhera-chan/77.jpg","menhera-chan98":"Menhera-chan/78.jpg","menhera-chan99":"Menhera-chan/79.jpg","tsuri-me-ju_mimi1":"Tsuri-me-ju_mimi/10753776_key@2x.png","tsuri-me-ju_mimi10":"Tsuri-me-ju_mimi/10753785_key@2x.png","tsuri-me-ju_mimi11":"Tsuri-me-ju_mimi/10753786_key@2x.png","tsuri-me-ju_mimi12":"Tsuri-me-ju_mimi/10753787_key@2x.png","tsuri-me-ju_mimi13":"Tsuri-me-ju_mimi/10753788_key@2x.png","tsuri-me-ju_mimi14":"Tsuri-me-ju_mimi/10753789_key@2x.png","tsuri-me-ju_mimi15":"Tsuri-me-ju_mimi/10753790_key@2x.png","tsuri-me-ju_mimi16":"Tsuri-me-ju_mimi/10753791_key@2x.png","tsuri-me-ju_mimi17":"Tsuri-me-ju_mimi/10753792_key@2x.png","tsuri-me-ju_mimi18":"Tsuri-me-ju_mimi/10753793_key@2x.png","tsuri-me-ju_mimi19":"Tsuri-me-ju_mimi/10753794_key@2x.png","tsuri-me-ju_mimi2":"Tsuri-me-ju_mimi/10753777_key@2x.png","tsuri-me-ju_mimi20":"Tsuri-me-ju_mimi/10753795_key@2x.png","tsuri-me-ju_mimi21":"Tsuri-me-ju_mimi/10753796_key@2x.png","tsuri-me-ju_mimi22":"Tsuri-me-ju_mimi/10753797_key@2x.png","tsuri-me-ju_mimi23":"Tsuri-me-ju_mimi/10753798_key@2x.png","tsuri-me-ju_mimi24":"Tsuri-me-ju_mimi/10753799_key@2x.png","tsuri-me-ju_mimi25":"Tsuri-me-ju_mimi/10753800_key@2x.png","tsuri-me-ju_mimi26":"Tsuri-me-ju_mimi/10753801_key@2x.png","tsuri-me-ju_mimi27":"Tsuri-me-ju_mimi/10753802_key@2x.png","tsuri-me-ju_mimi28":"Tsuri-me-ju_mimi/10753803_key@2x.png","tsuri-me-ju_mimi29":"Tsuri-me-ju_mimi/10753804_key@2x.png","tsuri-me-ju_mimi3":"Tsuri-me-ju_mimi/10753778_key@2x.png","tsuri-me-ju_mimi30":"Tsuri-me-ju_mimi/10753805_key@2x.png","tsuri-me-ju_mimi31":"Tsuri-me-ju_mimi/10753806_key@2x.png","tsuri-me-ju_mimi32":"Tsuri-me-ju_mimi/10753807_key@2x.png","tsuri-me-ju_mimi33":"Tsuri-me-ju_mimi/10753808_key@2x.png","tsuri-me-ju_mimi34":"Tsuri-me-ju_mimi/10753809_key@2x.png","tsuri-me-ju_mimi35":"Tsuri-me-ju_mimi/10753810_key@2x.png","tsuri-me-ju_mimi36":"Tsuri-me-ju_mimi/10753811_key@2x.png","tsuri-me-ju_mimi37":"Tsuri-me-ju_mimi/10753812_key@2x.png","tsuri-me-ju_mimi38":"Tsuri-me-ju_mimi/10753813_key@2x.png","tsuri-me-ju_mimi39":"Tsuri-me-ju_mimi/10753814_key@2x.png","tsuri-me-ju_mimi4":"Tsuri-me-ju_mimi/10753779_key@2x.png","tsuri-me-ju_mimi40":"Tsuri-me-ju_mimi/10753815_key@2x.png","tsuri-me-ju_mimi5":"Tsuri-me-ju_mimi/10753780_key@2x.png","tsuri-me-ju_mimi6":"Tsuri-me-ju_mimi/10753781_key@2x.png","tsuri-me-ju_mimi7":"Tsuri-me-ju_mimi/10753782_key@2x.png","tsuri-me-ju_mimi8":"Tsuri-me-ju_mimi/10753783_key@2x.png","tsuri-me-ju_mimi9":"Tsuri-me-ju_mimi/10753784_key@2x.png"},enableQQ:true,requiredFields:["nick","mail"]});}</script><script src=https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js></script><script>mediumZoom(document.querySelectorAll('div.post-body img'),{background:'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'})</script><script src=https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js type=module defer></script></body></html>
