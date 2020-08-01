@@ -1293,7 +1293,7 @@ uglyURLs = false
     # 404 页面
 
     # 视频封面
-    fofPoster = ""
+    fofPoster = "https://cdn.jsdelivr.net/gh/Borber/PublicPic1/ST/1.jpg"
 
     # 视频地址
     fofVideoWebm = ""
