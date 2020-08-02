@@ -5,7 +5,7 @@ share: true
 comments: true
 slug: "github_cdn"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
-description: "github 被撸坏了 我整个播客都是寄生在他身上"
+description: "github 被撸坏了 我整个博客都是寄生在他身上"
 tags: ["github", "CDN"]
 date: 2020-07-20T17:59:04+08:00
 ---
