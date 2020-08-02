@@ -1,5 +1,6 @@
 ---
 title: "Friend"
+description: "和而不同 美美与共"
 date: 2020-07-28T02:43:13+08:00
 ---
 
