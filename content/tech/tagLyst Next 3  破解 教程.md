@@ -1,5 +1,5 @@
 ---
-title: "tagLyst Next 3  破解 教程"
+title: "tagLyst Next 3.717 破解 教程"
 gitinfo: true
 share: true
 comments: true
@@ -7,7 +7,7 @@ slug: "tagLyst_Next_3"
 images: ["https://github.com/Borber/PublicPic1/blob/master/ST/2x.jpg"] 
 description: "但其实不知道怎么用这玩意"
 tags: ["破解"]
-date: 2020-06-17T21:42:04+08:00
+date: 2020-08-02T21:56:04+08:00
 ---
 
 此破解过程需要 mvn node electron 环境 请自行搜索 如何安装
@@ -92,7 +92,7 @@ asar pack app app.asar
 
 # 破解成果图
 
-![截图](https://gitee.com/BORBER/PublicPic/raw/master/Picture/博客园/image-20200617213655407.png)
+![截图](https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/tagLystNext/3717.png)
 
 
 
