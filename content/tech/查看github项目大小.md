@@ -130,6 +130,6 @@ https://api.github.com/repos/organization/repository
 }
 ```
 
-其中的第 `75` 行即为 size 我们可知. Linux 项目大小约为 3T
+其中的第 `75` 行即为 size 我们可知. Linux 项目大小约为 3G
 
  
