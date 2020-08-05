@@ -7,7 +7,7 @@ slug: "centos_screen"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/wolai/wolai.png"] 
 description: "这玩意不应该自带吗??"
 tags: ["CentOS", "Linux"]
-date: 2020-08-05T14:00:04+08:00
+date: 2020-08-05T17:26:04+08:00
 ---
 
 ### 安装
