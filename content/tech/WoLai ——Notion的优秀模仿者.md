@@ -12,7 +12,7 @@ date: 2020-07-18T12:17:04+08:00
 
 ## 注册码: 
 
- - SQGYG23 ❤
+ - **SQGYG23**  ❤
  - W4T9PKP
  - JLTHNJP
  - KMTXK7P
@@ -29,6 +29,8 @@ date: 2020-07-18T12:17:04+08:00
 - IHKJA7P
 - MD9ZA3M
 - 3XR67ZI
+- TBUP9JX
+- TI4TYMM
 
 **注册完了可以把你的邀请码发在下方 爱心接力**
 
