@@ -206,7 +206,7 @@ uglyURLs = false
         url = "/wiki/"
         name = "WiKi"
         weight = 4
-        pre = "internal"
+        pre = "external"
         post = "" # post = "user-circle"
     [[menu.main]]
         url = "/friend/"
