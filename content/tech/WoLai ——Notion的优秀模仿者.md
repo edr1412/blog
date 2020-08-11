@@ -32,6 +32,8 @@ date: 2020-07-18T12:17:04+08:00
 - TBUP9JX
 - TI4TYMM
 - QNGVBHI
+- LPSYZCP
+- YZ3X3ZI
 
 **注册完了可以把你的邀请码发在下方 爱心接力**
 
