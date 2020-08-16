@@ -4,7 +4,6 @@ gitinfo: true
 share: true
 comments: true
 slug: "Grow"
-images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/wolai/wolai.png"] 
 description: "请不要滥用"
 tags: ["Github","Grow"]
 date: 2020-08-16T16:40:04+08:00
@@ -16,7 +15,7 @@ date: 2020-08-16T16:40:04+08:00
 
 **项目地址: [Grow](https://github.com/Borber/Grow/)** 
 
-**==本项目十分开放 欢迎各位大佬 PR==**
+**本项目十分开放 欢迎各位大佬 PR**
 
 Fork:
 
