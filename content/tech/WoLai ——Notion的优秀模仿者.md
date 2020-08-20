@@ -2,6 +2,7 @@
 title: "WoLai ——Notion的优秀模仿者"
 gitinfo: true
 share: true
+enableTOC: false
 comments: true
 slug: "wolai"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/wolai/wolai.png"] 
