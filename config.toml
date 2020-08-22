@@ -852,10 +852,10 @@ uglyURLs = false
     #      `<video src="`
 
     # 是否开启
-    enableVideoHost = false
+    enableVideoHost = true
 
     # 视频外链地址
-    videoHostURL = "https://example.com/"
+    videoHostURL = "https://cdn.jsdelivr.net/gh/Borber/"
 
 
     ######################################
