@@ -7,7 +7,7 @@ slug: "TiddlyWiki_deploy"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/%E5%8D%9A%E5%AE%A2%E5%9B%AD/wolai/wolai.png"] 
 description: "TiddlyWiki 天下第一"
 tags: ["TiddlyWiki"]
-date: 2020-08-226T20:00:04+08:00
+date: 2020-08-26T20:00:04+08:00
 ---
 
 废话不多说 直接开搞
