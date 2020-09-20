@@ -7,7 +7,7 @@ slug: "Just-For_Fun-1"
 images: ["https://github.com/Borber/PublicPic1/blob/master/ST/2x.jpg"] 
 description: "神一样的男人"
 tags: ["linus", "linux"]
-date: 2020-08-08T21:42:04+08:00
+date: 2020-09-20T14:21:04+08:00
 ---
 
 仅做摘录
