@@ -10,7 +10,7 @@ date: 2020-07-28T02:43:13+08:00
 
 *死链*
 
-<a href="https://at0de.com/" class="ftag" target="_blank">at0de</a>  <a href="https://7e.re/" class="ftag" target="_blank">夜杏</a> 
+  <a href="https://7e.re/" class="ftag" target="_blank">夜杏</a> 
 
 
 
