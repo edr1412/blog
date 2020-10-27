@@ -15,6 +15,6 @@ jobs:
       env:
         DEPLOY_REPO: Borber/Blog_Compiled
         DEPLOY_BRANCH: master
-        DEPLOY_KEY: ${{ secrets.PERSONAL_TOKEN }}
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
         TZ: Asia/Shanghai
