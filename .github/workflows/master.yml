@@ -6,27 +6,15 @@ on:
       - master
 
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-        with:
-          submodules: true
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.73.0'
-          extended: true
-
-      - name: Build
-        run: hugo --gc --minify --cleanDestinationDir
-
-      - name: External Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: Borber/Blog_Compiled
-          publish_branch: master
-          force_orphan: true
-          publish_dir: ./public  # hugo 生成到 public 作为跟目录
-          commit_message: ${{ github.event.head_commit.message }}
+    - name: '开始部署...'
+      uses: reuixiy/hugo-deploy@v1
+      env:
+        DEPLOY_REPO: Borber/Blog_Compiled
+        DEPLOY_BRANCH: master
+        DEPLOY_KEY: ${{ secrets.PERSONAL_TOKEN }}
+        # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        TZ: Asia/Shanghai
