@@ -6,7 +6,7 @@ slug: "staruml"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
 description: "比rose好用多了 emmm"
 tags: ["electron"]
-date: 2020-11-07T13:29:04+08:00
+date: 2020-11-07T13:24:04+08:00
 ---
 
 下载 『[破解文件](https://borber.lanzous.com/iLW89i59fif
@@ -15,3 +15,4 @@ date: 2020-11-07T13:29:04+08:00
 替换 app.asar 文件
 
 重启StarUML 即可破解
+
