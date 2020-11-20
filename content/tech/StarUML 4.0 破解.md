@@ -9,8 +9,9 @@ tags: ["electron"]
 date: 2020-11-07T13:24:04+08:00
 ---
 
-下载 『[破解文件](https://borber.lanzous.com/iLW89i59fif
-)』 找到StarUML的安装目录 （例如 C:\Program Files\StarUML\resources）
+下载 『[Windows破解文件](https://borber.lanzous.com/iLW89i59fif
+)』 『[Linux破解文件](https://borber.lanzous.com/icbnVilin5a
+)』找到StarUML的安装目录 （例如 C:\Program Files\StarUML\resources）
 
 替换 app.asar 文件
 
