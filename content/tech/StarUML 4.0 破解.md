@@ -1,5 +1,5 @@
 ---
-title: "StarUML 4.0 破解"
+title: "StarUML 4.0 破解 Windows + Linux"
 share: true
 comments: true
 slug: "staruml"
