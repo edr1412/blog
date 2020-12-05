@@ -6,7 +6,7 @@ slug: "StarUML4_0"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
 description: "因为AUR的作者没有更新"
 tags: ["Linux"]
-date: 2020-11-05T11:25:04+08:00
+date: 2020-12-05T11:25:04+08:00
 ---
 
 新建一个目录 `~/.cache/yay/staruml`  并进入
