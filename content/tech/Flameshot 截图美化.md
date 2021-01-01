@@ -19,7 +19,8 @@ screenshot
 #!/bin/bash 
 flameshot gui --raw > /home/x/BORBER/Download/Temp/temp.png & #这里的地址 自定义 但需要与下一个脚本中匹配
 BPID=$!
-wait $BPID                                                                                               /home/x/BORBER/shell/addshadow # 自己更改为你的地址
+wait $BPID                                                                                             
+/home/x/BORBER/shell/addshadow # 自己更改为你的地址
 ```
 
 addshadow
@@ -56,3 +57,5 @@ rm /tmp/clipboard.png /tmp/des.png /tmp/output.png
 #### 效果图：
 
 ![shot](https://cdn.jsdelivr.net/gh/Borber/PublicPic1@master/teach/Flameshot/shot.png)
+
+建议右上角 暗色主题查看
