@@ -5,7 +5,7 @@ comments: true
 slug: "kde_fix_tg"
 images: ["https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"] 
 description: "有点蛋疼"
-tags: ["linux"，"KDE"]
+tags: ["linux", "KDE"]
 date: 2021-01-06T22:00:04+08:00
 ---
 
