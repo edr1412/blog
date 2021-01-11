@@ -4,7 +4,7 @@ description: "有朋自遠方來,一起看片"
 date: 2021-01-12T01:35:13+08:00
 ---
 
-<a href="https://gd.borber.workers.dev/" class="ftag" target="_blank">GoogleDrive</a> <a href="https://od.borber.workers.dev/" class="ftag" target="_blank">OneDrive</a> 
+<a href="https://gd.borber.cn/" class="ftag" target="_blank">GoogleDrive</a> <a href="https://od.borber.cn/" class="ftag" target="_blank">OneDrive</a> <a href="https://g.borber.cn/-----https://www.google.com/" class="ftag" target="_blank">Booble</a> <a href="https://js.zmirror.xyz/" class="ftag" target="_blank">反代網站</a> 
 
 
 
