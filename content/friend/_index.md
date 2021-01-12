@@ -1,5 +1,9 @@
 ---
 title: "Friend"
+gitinfo: true
+share: true
+comments: true
+images: ["https://github.com/Borber/PublicPic1/blob/master/ST/2x.jpg"] 
 description: "和而不同 美美与共"
 date: 2020-07-28T02:43:13+08:00
 ---
@@ -13,6 +17,22 @@ date: 2020-07-28T02:43:13+08:00
   <a href="https://7e.re/" class="ftag" target="_blank">夜杏</a> 
 
 
+
+欢迎申请友情链接，只要是正规站常更新即可
+申请首页链接需符合以下几点要求：
+
+1、本站优先招原创内容的博客或网站，站点主题内容是互联网资讯、技术、资源、设计等等；
+
+2、百度有正常收录，百度近期快照，不含有违法国家法律内容的合法网站。
+
+3、如果您的站点内容少之又少，且长期不更新，申请链接不予受理!
+
+留言后，麻烦站长们先在自己的站点添加上本站友链，我会尽快添加你的友链并通知你。
+
+> 本站标题 BORBER
+> 本站简介 跌宕歌词 纵横书卷 不与遣年华
+> 头像地址 https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png
+> 博客地址 https://borber.cnblogs.com/
 
 
 
