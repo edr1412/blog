@@ -29,8 +29,11 @@ date: 2020-07-28T02:43:13+08:00
 留言后，麻烦站长们先在自己的站点添加上本站友链，我会尽快添加你的友链并通知你。
 
 > 本站标题 BORBER
+>
 > 本站简介 跌宕歌词 纵横书卷 不与遣年华
+>
 > 头像地址 https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png
+>
 > 博客地址 https://borber.cnblogs.com/
 
 
