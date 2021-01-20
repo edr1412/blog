@@ -1,5 +1,8 @@
 ---
 title: "Share"
+gitinfo: true
+share: true
+comments: true
 description: "有朋自遠方來,一起看片"
 date: 2021-01-12T01:35:13+08:00
 ---
