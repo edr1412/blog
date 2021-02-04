@@ -39,12 +39,3 @@
     icon = "telegram"
     title = "Telegram"
     weight = 5
-    
-[[socials]]
-    id = "mastodon"
-    url = "https://wxw.moe/@BORBER"
-    rel = "me"
-    icon = "mastodon"
-    title = "Mastodon"
-    weight = 6
-    
