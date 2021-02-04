@@ -42,7 +42,9 @@
     
 [[socials]]
     id = "mastodon"
-    url = "<a rel="me" href="https://wxw.moe/@BORBER">Mastodon</a>"
+    url = "https://wxw.moe/@BORBER"
+    rel = "me"
     icon = "mastodon"
     title = "Mastodon"
     weight = 6
+    
